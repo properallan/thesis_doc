@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis_allan.aux
+A level-1 auxiliary file: Textuais/Introduction.aux
+A level-1 auxiliary file: Textuais/Bibliography_Review.aux
+A level-1 auxiliary file: Textuais/Methodology.aux
+A level-1 auxiliary file: Textuais/Case_Study.aux
+The style file: Bibliografia/abnt2023.bst
+Database file #1: /Users/ppiper/Documents/mendeley/library.bib
+Reallocated buffer (elt_size=1) to 40000 items from 20000.
+Reallocated sv_buffer (elt_size=1) to 40000 items from 20000.
+Reallocated ex_buf (elt_size=1) to 40000 items from 20000.
+Reallocated out_buf (elt_size=1) to 40000 items from 20000.
+Reallocated name_tok (elt_size=4) to 40000 items from 20000.
+Reallocated name_sep_char (elt_size=1) to 40000 items from 20000.
+You've used 36 entries,
+            2376 wiz_defined-function locations,
+            864 strings with 13304 characters,
+and the built_in function-call counts, 29366 in all, are:
+= -- 2119
+> -- 345
+< -- 799
++ -- 1817
+- -- 176
+* -- 2726
+:= -- 2545
+add.period$ -- 111
+call.type$ -- 36
+change.case$ -- 628
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 3468
+empty$ -- 1883
+format.name$ -- 893
+if$ -- 5072
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 75
+num.names$ -- 180
+pop$ -- 764
+preamble$ -- 1
+purify$ -- 36
+quote$ -- 0
+skip$ -- 1406
+stack$ -- 0
+substring$ -- 890
+swap$ -- 2930
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 186
+warning$ -- 0
+while$ -- 206
+width$ -- 0
+write$ -- 38

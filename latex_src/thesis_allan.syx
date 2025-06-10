@@ -1,0 +1,21 @@
+\indexentry{[$\mathbf{X}$] Input or \textit{low fidelity} dataset matrix. |hyperpage}{17}
+\indexentry{[$\mathbf{y}$] Target or \textit{high fidelity} dataset matrix. |hyperpage}{17}
+\indexentry{[$\mathcal{L}$] Loss function |hyperpage}{17}
+\indexentry{[$\mathbf{X}$] Input or \textit{low fidelity} data |hyperpage}{17}
+\indexentry{[$\mathbf{y}$] Target or \textit{high fidelity} data. |hyperpage}{17}
+\indexentry{[$\mathcal{\tilde{y}}$] Approximated target or \textit{high fidelity} data. |hyperpage}{17}
+\indexentry{[$L_i$] Distante to $r_i$ center |hyperpage}{34}
+\indexentry{[$L_{tht1}$] Convergent $r_c$ tangency distance |hyperpage}{34}
+\indexentry{[$L_{tht2}$] Divergent $r_c$ tangency distance |hyperpage}{34}
+\indexentry{[$L_{th}$] Length to throat |hyperpage}{34}
+\indexentry{[$L_{ti}$] Length to $r_i$ tangency |hyperpage}{34}
+\indexentry{[$L_{to}$] Length to $r_o$ tangency |hyperpage}{34}
+\indexentry{[$r_{c}$] Curvature radius at contraction |hyperpage}{34}
+\indexentry{[$r_{i}$] Curvature radius at inlet |hyperpage}{34}
+\indexentry{[$r_{in}$] Inlet radius |hyperpage}{34}
+\indexentry{[$r_{th}$] Throat radius |hyperpage}{34}
+\indexentry{[$r_{out}$] Outlet radius |hyperpage}{34}
+\indexentry{[$\theta_{div}$] Divergence angle |hyperpage}{34}
+\indexentry{[$\theta_{conv}$] Convergence angle |hyperpage}{34}
+\indexentry{[$\partial$] Partial derivative |hyperpage}{35}
+\indexentry{[$\partial$] Partial derivative |hyperpage}{35}

@@ -1,0 +1,75 @@
+\begin{thebibliography}{\hspace{\parindent}}
+
+\bibitem[Back \MakeLowercase{et~al.}(1965)Back; Massier; Gier]{Back1965a} BACK, L.~H.; MASSIER, P.~F.; GIER, H.~L\@. {Comparison of measured and predicted flows through conical supersonic nozzles, with emphasis on the transonic region}. \textbf{AIAA Journal}, [S.l.], v.3, n.9, p.1606--1614, 1965.
+
+\bibitem[Barwey \MakeLowercase{et~al.}(2022)Barwey; Hassanaly; Raman; Steinberg]{Barwey2022c} BARWEY, S.; HASSANALY, M.; RAMAN, V.; STEINBERG, A\@. {Using Machine Learning to Construct Velocity Fields from OH-PLIF Images}. \textbf{Combustion Science and Technology}, [S.l.], v.194, n.1, p.93--116, 2022.
+
+\bibitem[Bolton; Zanna(2019)Bolton; Zanna]{Bolton2019b} BOLTON, T.; ZANNA, L\@. {Applications of Deep Learning to Ocean Data Inference and Subgrid Parameterization}. \textbf{Journal of Advances in Modeling Earth Systems}, [S.l.], v.11, n.1, p.376--399, jan~2019.
+
+\bibitem[Bright \MakeLowercase{et~al.}(2013)Bright; Lin; Kutz]{Bright2013} BRIGHT, I.; LIN, G.; KUTZ, J.~N\@. {Compressive sensing based machine learning strategy for characterizing the flow around a cylinder with limited pressure measurements}. \textbf{Physics of Fluids}, [S.l.], v.25, n.12, dec~2013.
+
+\bibitem[Bubeck \MakeLowercase{et~al.}(2023)Bubeck; Chandrasekaran; Eldan; Gehrke; Horvitz; Kamar; Lee; Lee; Li; Lundberg; Nori; Palangi; Ribeiro; Zhang]{Bubeck2023} BUBECK, S.; CHANDRASEKARAN, V.; ELDAN, R.; GEHRKE, J.; HORVITZ, E.; KAMAR, E.; LEE, P.; LEE, Y.~T.; LI, Y.; LUNDBERG, S.; NORI, H.; PALANGI, H.; RIBEIRO, M.~T.; ZHANG, Y\@. {Sparks of Artificial General Intelligence: Early experiments with GPT-4}. \textbf{Microsoft Research}, [S.l.], 2023.
+
+\bibitem[Demo \MakeLowercase{et~al.}(2019)Demo; Tezzele; Rozza]{Demo2019c} DEMO, N.; TEZZELE, M.; ROZZA, G\@. {A non-intrusive approach for the reconstruction of POD modal coefficients through active subspaces}. \textbf{Comptes Rendus - Mecanique}, [S.l.], v.347, n.11, p.873--881, nov~2019.
+
+\bibitem[Economon \MakeLowercase{et~al.}(2016)Economon; Palacios; Copeland; Lukaczyk; Alonso]{Economon2016a} ECONOMON, T.~D.; PALACIOS, F.; COPELAND, S.~R.; LUKACZYK, T.~W.; ALONSO, J.~J\@. {SU2: An open-source suite for multiphysics simulation and design}. \textbf{AIAA Journal}, [S.l.], v.54, n.3, p.828--846, 2016.
+
+\bibitem[Erichson \MakeLowercase{et~al.}(2020)Erichson; Mathelin; Yao; Brunton; Mahoney; Kutz]{Erichson2020b} ERICHSON, N.~B.; MATHELIN, L.; YAO, Z.; BRUNTON, S.~L.; MAHONEY, M.~W.; KUTZ, J.~N\@. {Shallow neural networks for fluid flow reconstruction with limited sensors}. \textbf{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}, [S.l.], v.476, n.2238, 2020.
+
+\bibitem[Fujio \MakeLowercase{et~al.}(2023)Fujio; Akiyama; Ogawa]{Fujio2023} FUJIO, C.; AKIYAMA, K.; OGAWA, H\@. {Fast and reliable prediction of scramjet flowfields via Gaussian process latent variable model and deep learning}. \textbf{Physics of Fluids}, [S.l.], v.35, n.4, 2023.
+
+\bibitem[Gao \MakeLowercase{et~al.}(2024)Gao; Qian; Dong; Liu]{Gao2024} GAO, H.; QIAN, W.; DONG, J.; LIU, J\@. {Rapid prediction of indoor airflow field using operator neural network with small dataset}. \textbf{Building and Environment}, [S.l.], v.251, n.October 2023, p.111175, 2024.
+
+\bibitem[Geneva; Zabaras(2020)Geneva; Zabaras]{Geneva2020c} GENEVA, N.; ZABARAS, N\@. {Multi-Fidelity Generative Deep Learning Turbulent Flows}. \textbf{Foundations of Data Science}, [S.l.], v.2, n.4, p.391--428, jun~2020.
+
+\bibitem[Hodges \MakeLowercase{et~al.}(2019)Hodges; Lattimer; Luxbacher]{Hodges2019c} HODGES, J.~L.; LATTIMER, B.~Y.; LUXBACHER, K.~D\@. {Compartment fire predictions using transpose convolutional neural networks}. \textbf{Fire Safety Journal}, [S.l.], v.108, n.November 2018, p.102854, sep~2019.
+
+\bibitem[Jayaraman \MakeLowercase{et~al.}(2019)Jayaraman; {Al Mamun}; Lu]{Jayaraman2019a} JAYARAMAN, B.; {Al Mamun}, S.~M.; LU, C\@. {Interplay of sensor quantity, placement and system dimension in POD-based sparse reconstruction of fluid flows}. \textbf{Fluids}, [S.l.], v.4, n.2, jun~2019.
+
+\bibitem[Jin \MakeLowercase{et~al.}(2024)Jin; Hou; Zhong]{Jin2024} JIN, Y.; HOU, L.; ZHONG, S\@. {Extended dynamic mode decomposition with invertible dictionary learning}. \textbf{Neural Networks}, [S.l.], v.173, n.February, p.106177, 2024.
+
+\bibitem[Kiener \MakeLowercase{et~al.}(2023)Kiener; Langer; Bekemeyer]{Kiener2023} KIENER, A.; LANGER, S.; BEKEMEYER, P\@. {Data-driven correction of coarse grid CFD simulations}. \textbf{Computers and Fluids}, [S.l.], v.264, n.December 2022, p.105971, 2023.
+
+\bibitem[Lee \MakeLowercase{et~al.}(2024)Lee; Jang; Lee; Cho; Shin]{Lee2024} LEE, S.~H.; JANG, K.; LEE, S.; CHO, H.; SHIN, S.~J\@. {Parametric model order reduction by machine learning for fluid–structure interaction analysis}. \textbf{Engineering with Computers}, [S.l.], v.40, n.1, p.45--60, 2024.
+
+\bibitem[Li \MakeLowercase{et~al.}(2023)Li; Yuan; Liu; Tan; Si; Wang; Cao]{Li2023} LI, C.; YUAN, P.; LIU, Y.; TAN, J.; SI, X.; WANG, S.; CAO, Y\@. {Fast flow field prediction of hydrofoils based on deep learning}. \textbf{Ocean Engineering}, [S.l.], v.281, n.May, p.114743, 2023.
+
+\bibitem[Li \MakeLowercase{et~al.}(2023)Li; Savari; Sheikh; Barigou]{Li2023a} LI, K.; SAVARI, C.; SHEIKH, H.~A.; BARIGOU, M\@. {A data-driven machine learning framework for modeling of turbulent mixing flows}. \textbf{Physics of Fluids}, [S.l.], v.35, n.1, 2023.
+
+\bibitem[Li \MakeLowercase{et~al.}(2024)Li; Lanotte; Buzzicotti; Bonaccorso; Biferale]{Li2024} LI, T.; LANOTTE, A.~S.; BUZZICOTTI, M.; BONACCORSO, F.; BIFERALE, L\@. {Multi-Scale Reconstruction of Turbulent Rotating Flows with Generative Diffusion Models}. \textbf{Atmosphere}, [S.l.], v.15, n.1, p.1--23, 2024.
+
+\bibitem[Liu \MakeLowercase{et~al.}(2021)Liu; Li; Jing; Xie; Zhang]{Liu2021c} LIU, T.; LI, Y.; JING, Q.; XIE, Y.; ZHANG, D\@. {Supervised learning method for the physical field reconstruction in a nanofluid heat transfer problem}. \textbf{International Journal of Heat and Mass Transfer}, [S.l.], v.165, p.120684, feb~2021.
+
+\bibitem[Min; Jiang(2024)Min; Jiang]{Min2024} MIN, G.; JIANG, N\@. {Flow fields prediction for data-driven model of parallel twin cylinders based on POD-RBFNN and POD-BPNN surrogate models}. \textbf{Annals of Nuclear Energy}, [S.l.], v.199, n.December 2023, p.110342, 2024.
+
+\bibitem[Omata; Shirayama(2019)Omata; Shirayama]{Omata2019c} OMATA, N.; SHIRAYAMA, S\@. {A novel method of low-dimensional representation for temporal behavior of flow fields using deep autoencoder}. \textbf{AIP Advances}, [S.l.], v.9, n.1, jan~2019.
+
+\bibitem[Peng \MakeLowercase{et~al.}(2020)Peng; Chen; Aubry; Chen; Wu]{Peng2020b} PENG, J.~Z.; CHEN, S.; AUBRY, N.; CHEN, Z.~H.; WU, W.~T\@. {Time-variant prediction of flow over an airfoil using deep neural network}. \textbf{Physics of Fluids}, [S.l.], v.32, n.12, dec~2020.
+
+\bibitem[Peters \MakeLowercase{et~al.}(2023)Peters; Silva; Ekaterinaris]{Peters2023} PETERS, N.; SILVA, C.; EKATERINARIS, J\@. {A data-driven reduced-order model for rotor optimization}. \textbf{Wind Energy Science}, [S.l.], v.8, n.7, p.1201--1223, 2023.
+
+\bibitem[Reinbold \MakeLowercase{et~al.}(2021)Reinbold; Kageorge; Schatz; Grigoriev]{Reinbold2021d} REINBOLD, P.~A.; KAGEORGE, L.~M.; SCHATZ, M.~F.; GRIGORIEV, R.~O\@. {Robust learning from noisy, incomplete, high-dimensional experimental data via physically constrained symbolic regression}. \textbf{Nature Communications}, [S.l.], v.12, n.1, p.1--8, dec~2021.
+
+\bibitem[Riel \MakeLowercase{et~al.}(2021)Riel; Minchew; Bischoff]{Riel2021c} RIEL, B.; MINCHEW, B.; BISCHOFF, T\@. {Data-Driven Inference of the Mechanics of Slip Along Glacier Beds Using Physics-Informed Neural Networks: Case Study on Rutford Ice Stream, Antarctica}. \textbf{Journal of Advances in Modeling Earth Systems}, [S.l.], v.13, n.11, p.1--27, nov~2021.
+
+\bibitem[Roache(1994)Roache]{Roache1994} ROACHE, P.~J\@. {Perspective: A method for uniform reporting of grid refinement studies}. \textbf{Journal of Fluids Engineering, Transactions of the ASME}, [S.l.], v.116, n.3, p.405--413, 1994.
+
+\bibitem[Sekar \MakeLowercase{et~al.}(2019)Sekar; Jiang; Shu; Khoo]{Sekar2019} SEKAR, V.; JIANG, Q.; SHU, C.; KHOO, B.~C\@. {Fast flow field prediction over airfoils using deep learning approach}. \textbf{Physics of Fluids}, [S.l.], v.31, n.5, may~2019.
+
+\bibitem[Volpiani \MakeLowercase{et~al.}(2022)Volpiani; Bernardini; Franceschini]{Volpiani2022} VOLPIANI, P.~S.; BERNARDINI, R.~F.; FRANCESCHINI, L\@. {Neural network-based eddy-viscosity correction for RANS simulations of flows over bi-dimensional bumps}. \textbf{International Journal of Heat and Fluid Flow}, [S.l.], v.97, n.July, p.109034, 2022.
+
+\bibitem[Wan; Sapsis(2017)Wan; Sapsis]{Wan2017a} WAN, Z.~Y.; SAPSIS, T.~P\@. {Reduced-space Gaussian Process Regression for data-driven probabilistic forecast of chaotic dynamical systems}. \textbf{Physica D: Nonlinear Phenomena}, [S.l.], v.345, p.40--55, apr~2017.
+
+\bibitem[Wang; Liu(2017)Wang; Liu]{Wang2017a} WANG, P.; LIU, Y\@. {Unsteady flow behavior of a steam turbine control valve in the choked condition: Field measurement, detached eddy simulation and acoustic modal analysis}. \textbf{Applied Thermal Engineering}, [S.l.], v.117, p.725--739, 2017.
+
+\bibitem[Weatheritt; Sandberg(2017)Weatheritt; Sandberg]{Weatheritt2017c} WEATHERITT, J.; SANDBERG, R.~D\@. {The development of algebraic stress models using a novel evolutionary algorithm}. \textbf{International Journal of Heat and Fluid Flow}, [S.l.], v.68, n.September, p.298--318, dec~2017.
+
+\bibitem[Wu \MakeLowercase{et~al.}(2022)Wu; Liu; An; Lyu]{WU2022a} WU, H.; LIU, X.; AN, W.; LYU, H\@. {A generative deep learning framework for airfoil flow field prediction with sparse data}. \textbf{Chinese Journal of Aeronautics}, [S.l.], v.35, n.1, p.470--484, jan~2022.
+
+\bibitem[Zhang; Duraisamy(2015)Zhang; Duraisamy]{Zhang2015} ZHANG, Z.~J.; DURAISAMY, K\@. {Machine learning methods for data-driven turbulence modeling}. In: \textbf{22nd AIAA Computational Fluid Dynamics Conference}. [S.l.]: American Institute of Aeronautics and Astronautics, 2015.
+
+\bibitem[Zhu \MakeLowercase{et~al.}(2022)Zhu; Chen; Ouyang; Yan; Lei; Chen; Luo]{Zhu2022a} ZHU, L.~T.; CHEN, X.~Z.; OUYANG, B.; YAN, W.~C.; LEI, H.; CHEN, Z.; LUO, Z.~H\@. {Review of Machine Learning for Hydrodynamics, Transport, and Reactions in Multiphase Flows and Reactors}. \textbf{Industrial and Engineering Chemistry Research}, [S.l.], v.61, n.28, p.9901--9949, mar~2022.
+
+\bibitem[Zhu \MakeLowercase{et~al.}(2019)Zhu; Zhang; Kou; Liu]{Zhu2019} ZHU, L.; ZHANG, W.; KOU, J.; LIU, Y\@. {Machine learning methods for turbulence modeling in subsonic flows around airfoils}. \textbf{Physics of Fluids}, [S.l.], v.31, n.1, jan~2019.
+
+\end{thebibliography}

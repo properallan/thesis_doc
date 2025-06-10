@@ -1,0 +1,60 @@
+\makeatletter \iftoggle {toggleVersaoFinal}{\EveryShipout {\if@mainmatter \else \ifodd \c@page \hbox {}\pagebreak \fi \fi } } {} 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Overal training flowchart for a generic data-driven supervised learning algorithm, the model is trained to map from a reduced dimensional representation $\Phi (\mathbf {X},\boldsymbol {\theta })$ to an approximated solution in the high dimensional space $\mathbf {\tilde y}$.}}{17}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Inference flowchart for the fast prediction of an approximated solution $\mathbf {\tilde y}$for and unseeing low fidelity data sample $\mathbf {X}$.}}{17}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Boolean circuit representation of the search query of Listing ref{lst:query}.}}{22}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Results of using the search query of Listing ref{lst:query} in \textit {Scopus} and \textit {Web of Science}. This figure displays how new this field of study is, and it also reveals an exponential rise in publications each year, both in terms of raw data and also when considering the more notable publications (those with more than 20 citations).}}{23}{figure.caption.13}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Parametrized nozzle geometry.}}{34}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Parametrized Nozzle geometries, (b) is the baseline.}}{35}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Quasi one dimensional domain discretization for the cell-centered finite volume method.}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Validation using all experimental data of reference \cite {Back1965a} for the nozzle in question.}}{38}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Latin Hypercube Sampling for Design of Experiments with adiabatic wall.}}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Latin Hypercube Sampling for Design of Experiments with prescribed wall temperature.}}{40}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces MAPE for prediction using only one dimensional fields.}}{41}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces NRMSE for prediction using only one dimensional fields.}}{42}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces R2 for prediction using only one dimensional fields.}}{42}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces MAPE for prediction using only one dimensional fields, adiabatic wall.}}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces NRMSE for prediction using only one dimensional fields, adiabatic wall.}}{43}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces R2 for prediction using only one dimensional fields, adiabatic wall.}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Hyperparameter optimization.}}{46}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Hyperparameter optimization.}}{46}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Hyperparameter optimization.}}{46}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Hyperparameter optimization.}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Hyperparameter optimization.}}{47}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Hyperparameter optimization.}}{47}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Hyperparameter optimization.}}{48}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Hyperparameter optimization.}}{48}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Hyperparameter optimization.}}{48}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Hyperparameter optimization.}}{49}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Hyperparameter optimization.}}{49}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Hyperparameter optimization.}}{49}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Hyperparameter optimization.}}{50}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Hyperparameter optimization.}}{50}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Hyperparameter optimization.}}{50}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Hyperparameter optimization.}}{51}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Hyperparameter optimization.}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Hyperparameter optimization.}}{51}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Hyperparameter optimization.}}{52}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Hyperparameter optimization.}}{52}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Hyperparameter optimization.}}{52}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Hyperparameter optimization.}}{53}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Hyperparameter optimization.}}{53}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Hyperparameter optimization.}}{53}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Histogram and Surface.}}{54}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Histogram and Surface.}}{54}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces Histogram and Surface.}}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces HHistogram and Surface.}}{55}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces Histogram and Surface.}}{55}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces Histogram and Surface.}}{55}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Histogram and Surface.}}{56}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Histogram and Surface.}}{56}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Histogram and Surface.}}{56}{figure.caption.65}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Histogram and Surface.}}{57}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces Histogram and Surface.}}{57}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Histogram and Surface.}}{57}{figure.caption.68}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
