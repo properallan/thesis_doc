@@ -1,0 +1,10 @@
+\makeatletter \iftoggle {toggleVersaoFinal}{\EveryShipout {\if@mainmatter \else \ifodd \c@page \hbox {}\pagebreak \fi \fi } } {} 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
