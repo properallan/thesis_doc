@@ -1,3 +1,37 @@
 \begin{thebibliography}{\hspace{\parindent}}
 
+\bibitem[Barcenas \MakeLowercase{et~al.}(2023)Barcenas; Pioquinto; Kurkina; Lukyanov]{EspinosaBarcenas2023} BARCENAS, O. U.~E.; PIOQUINTO, J. G.~Q.; KURKINA, E.; LUKYANOV, O\@. Surrogate Aerodynamic Wing Modeling Based on a Multilayer Perceptron. \textbf{Aerospace}, [S.l.], v.10, 2~2023.
+
+\bibitem[Bekemeyer \MakeLowercase{et~al.}(2025)Bekemeyer; Hariharan; Wissink; Cornelius]{Bekemeyer2025} BEKEMEYER, P.; HARIHARAN, N.; WISSINK, A.; CORNELIUS, J\@. Introduction of Applied Aerodynamics Surrogate Modeling Benchmark Cases. In: AIAA SCIENCE AND TECHNOLOGY FORUM AND EXPOSITION, AIAA SCITECH FORUM 2025, 2025. \textbf{Anais{\ldots}} American Institute of Aeronautics and Astronautics Inc: AIAA, 2025.
+
+\bibitem[Benner \MakeLowercase{et~al.}(2015)Benner; Gugercin; Willcox]{benner2015survey} BENNER, P.; GUGERCIN, S.; WILLCOX, K\@. A survey of projection-based model reduction methods for parametric dynamical systems. \textbf{SIAM review}, [S.l.], v.57, n.4, p.483--531, 2015.
+
+\bibitem[Brown(2009)Brown]{brown2009reduced} BROWN, J.~M\@. \textbf{Reduced order modeling methods for turbomachinery design}. [S.l.:~s.n.], 2009.
+
+\bibitem[Hu \MakeLowercase{et~al.}(2020)Hu; Zhang; Xiang; Wang]{Hu2020} HU, L.; ZHANG, J.; XIANG, Y.; WANG, W\@. Neural Networks-Based Aerodynamic Data Modeling: A Comprehensive Review. \textbf{IEEE Access}, [S.l.], v.8, p.90805--90823, 2020.
+
+\bibitem[Kelly \MakeLowercase{et~al.}(2021)Kelly; Lupini; Epureanu]{Kelly2021} KELLY, S.~T.; LUPINI, A.; EPUREANU, B.~I\@. Data-Driven Modeling Approach for Mistuned Cyclic Structures. \textbf{AIAA Journal}, [S.l.], v.59, n.7, p.2684--2696, 2021.
+
+\bibitem[Kenway; Martins(2016)Kenway; Martins]{Kenway2016} KENWAY, G.~K.; MARTINS, J.~R\@. Multipoint aerodynamic shape optimization investigations of the common research model wing. In: AIAA JOURNAL, 2016. \textbf{Anais{\ldots}} American Institute of Aeronautics and Astronautics Inc., 2016. v.54, p.113--128.
+
+\bibitem[Lu \MakeLowercase{et~al.}(2021)Lu; Zhang; Zhang; Gu; Jin; Zhao; Fu; Yang]{Lu2021} LU, K.; ZHANG, K.; ZHANG, H.; GU, X.; JIN, Y.; ZHAO, S.; FU, C.; YANG, Y\@. \textbf{A review of model order reduction methods for large-scale structure systems}. [S.l.]: Hindawi Limited, 2021. v.2021.
+
+\bibitem[Park \MakeLowercase{et~al.}(2016)Park; Loseille; Krakos; Michal; Alonso]{Park2016} PARK, M.~A.; LOSEILLE, A.; KRAKOS, J.; MICHAL, T.~R.; ALONSO, J.~J\@. Unstructured grid adaptation: status, potential impacts, and recommended investments towards CFD 2030. In: AIAA FLUID DYNAMICS CONFERENCE, 46., 2016. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2016. p.3323.
+
+\bibitem[Pereira \MakeLowercase{et~al.}(2021)Pereira; Eça; Vaz; Girimaji]{Pereira2021} PEREIRA, F.~S.; EçA, L.; VAZ, G.; GIRIMAJI, S.~S\@. \textbf{Toward Predictive RANS and SRS Computations of Turbulent External Flows of Practical Interest}. [S.l.]: Springer Science and Business Media B.V., 2021. 3953-4029p. v.28.
+
+\bibitem[{Research Centre for Greenhouse Gas Innovation}(n.d.){Research Centre for Greenhouse Gas Innovation}]{RCGI_Project77} {Research Centre for Greenhouse Gas Innovation}. \textbf{Project 77}: Simulation, optimization, and experimental analysis of centrifugal compressors operating with supercritical CO2 and mixtures of CO2 and CH4. Dispon{\'\i}vel em: <https://sites.usp.br/rcgi/br/programas-e-projetos-2/gases-de-efeito-estufa-ghg/>. Acesso em: 2025-07-21.
+
+\bibitem[Schiestel; Chaouat(2022)Schiestel; Chaouat]{Schiestel2022} SCHIESTEL, R.; CHAOUAT, B\@. Turbulence modeling and simulation advances in CFD during the past 50 years Comptes Rendus Mécanique Turbulence modeling and simulation advances in CFD during the past 50 years Comptes Rendus Mécanique More than a half century of Computational Fluid Dynamics / Plus d'un demi-siècle de mécanique des fluides numérique Turbulence modeling and simulation advances in CFD during the past 50 years. \textbf{Comptes Rendus. Mécanique}, [S.l.], v.350, p.1--29, 2022.
+
+\bibitem[Slotnick \MakeLowercase{et~al.}(2014)Slotnick; Khodadoust; Alonso; Gropp; Mavriplis]{Slotnick2014} SLOTNICK, J.; KHODADOUST, A.; ALONSO, J.; GROPP, W.; MAVRIPLIS, D\@. \textbf{CFD Vision 2030 Study}: A Path to Revolutionary Computational Aerosciences. [S.l.]: NASA Langley Research Center, 2014.
+
+\bibitem[Smith(2014)Smith]{Smith2014} SMITH, R.~C\@. \textbf{Uncertainty Quantification}: Theory, Implementation, and Applications. Philadelphia, PA: SIAM, 2014. (Computational Science \& Engineering, v.12).
+
+\bibitem[Spalart; Venkatakrishnan(2016)Spalart; Venkatakrishnan]{Spalart2016} SPALART, P.~R.; VENKATAKRISHNAN, V\@. On the role and challenges of CFD in the aerospace industry. \textbf{Aeronautical Journal}, [S.l.], v.120, p.209--232, 1~2016.
+
+\bibitem[Ye \MakeLowercase{et~al.}(2024)Ye; Krzhizhanovskaya; Hoekstra]{ye2024data} YE, D.; KRZHIZHANOVSKAYA, V.; HOEKSTRA, A.~G\@. Data-driven reduced-order modelling for blood flow simulations with geometry-informed snapshots. \textbf{Journal of computational Physics}, [S.l.], v.497, p.112639, 2024.
+
+\bibitem[Yondo \MakeLowercase{et~al.}(2018)Yondo; Andrés; Valero]{Yondo2018} YONDO, R.; ANDRéS, E.; VALERO, E\@. \textbf{A review on design of experiments and surrogate models in aircraft real-time and many-query aerodynamic analyses}. [S.l.]: Elsevier Ltd, 2018. 23-61p. v.96.
+
 \end{thebibliography}

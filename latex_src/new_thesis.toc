@@ -1,69 +1,77 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{List of Figures}{10}{chapter*.6}%
-\contentsline {chapter}{List of Tables}{11}{chapter*.7}%
-\contentsline {chapter}{List of Algorithms}{12}{chapter*.8}%
-\contentsline {chapter}{\numberline {1}Introduction}{16}{chapter.1}%
-\contentsline {section}{\numberline {1.1}The Grand Challenge: The Multi-Query Bottleneck in Computational Aerodynamics}{16}{section.1.1}%
-\contentsline {section}{\numberline {1.2}A Data-Driven Paradigm: Reduced-Order Models (ROMs)}{17}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Thesis Objectives and Contributions}{18}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Dissertation Outline}{19}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Foundations of Reduced-Order Modeling and Machine Learning in Fluid Dynamics}{20}{chapter.2}%
-\contentsline {section}{\numberline {2.1} The Imperative for Model Reduction in Computational Aerodynamics}{20}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Dimensionality Reduction for Fluid Flows: Proper Orthogonal Decomposition (POD)}{20}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Theoretical Formulation}{21}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}The "Energy-Optimal" Basis}{21}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Implementation and Preprocessing}{22}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Limitations and Future Directions}{22}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Surrogate Modeling for Latent Space Dynamics}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Gaussian Process Regression (GPR)}{23}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Artificial Neural Networks (ANNs)}{23}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Toward Physically Consistent and Interpretable Models}{24}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}The Rise of Physics-Informed Machine Learning (PIML)}{25}{subsection.2.4.1}%
-\contentsline {section}{\numberline {2.5}The Interpretability Imperative}{25}{section.2.5}%
-\contentsline {chapter}{\numberline {3}A Unified Framework for Parametric Field Reconstruction}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Overview of the End-to-End Pipeline}{26}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Stage 1: Parametric Data Generation}{26}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Geometry Parameterization}{27}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Design of Experiments (DoE)}{27}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}High-Fidelity Simulation}{27}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Stage 2: Topological Harmonization via Mesh Morphing}{27}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Stage 3 and 4: The Hybrid POD-ML Regression Pipeline}{28}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Stage 5: Advanced Strategies for Model Training and Validation}{29}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Hyperparameter Optimization (BOHB)}{29}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2} The Hybrid Loss Function for ANNs}{30}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Rigorous Validation Protocols}{30}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Case Study I: Parametric Reconstruction of 3D Turbomachinery Blade Surfaces}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Problem Definition: Aerodynamics of the NASA Rotor 37}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Application of the POD-GPR Pipeline}{34}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1} Data Generation and Preprocessing}{34}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Mesh Morphing in Action}{34}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3} POD Dimensionality Reduction}{34}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}GPR Surrogate Modeling}{35}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Performance Analysis and Validation}{35}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Qualitative Assessment}{35}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Quantitative Accuracy}{36}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Computational Efficiency}{36}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Discussion}{37}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Case Study II: Multi-Fidelity Reconstruction and Regressor Comparison for 2D Supersonic Nozzle Flows}{38}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Problem Definition: Shock-Wave/Boundary-Layer Interaction in a de Laval Nozzle}{38}{section.5.1}%
-\contentsline {section}{\numberline {5.2}A Comparative Analysis of Surrogate Regressors: ANN vs. GPR}{39}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Dataset Construction}{39}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Hyperparameter Optimization and Training}{39}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Performance Comparison via Cross-Validation}{40}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Noise Robustness Comparison}{41}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Model Interpretability through SHAP Analysis}{42}{subsection.5.2.5}%
-\contentsline {section}{\numberline {5.3}Discussion}{42}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Synthesis, Conclusions, and Future Directions}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Synthesis of Findings: A Unified and Versatile Framework}{44}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Contributions to the Field}{45}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Limitations of the Current Work}{46}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Future Research Directions}{46}{section.6.4}%
-\contentsline {chapter}{\numberline {A}Mathematical Derivations}{49}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Harmonic Mapping for Mesh Morphing}{49}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Proper Orthogonal Decomposition (POD)}{50}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Gaussian Process Regression (GPR) Predictive Equations}{50}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Gradient of the Hybrid Loss Function for ANNs}{51}{section.A.4}%
-\contentsline {chapter}{\numberline {B}Source Code and Data Availability}{52}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Source Code Availability}{52}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Data Availability}{53}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Pre-trained Models}{53}{section.B.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{15}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The Grand Challenge: The Multi-Query Bottleneck in Computational Aerodynamics}{15}{section.1.1}%
+\contentsline {section}{\numberline {1.2}A Data-Driven Paradigm: Reduced-Order Models (ROMs)}{16}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Thesis Objectives and Contributions}{17}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Dissertation Outline}{18}{section.1.4}%
+\contentsline {chapter}{\numberline {2}A Review of the State-of-the-Art in Computational Science and Reduced-Order Modeling}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Grand Challenges of Modern Computational Simulation}{20}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Physical Modeling of Complex Flows}{20}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}The Geometry and Grid Generation Bottleneck}{21}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Knowledge Extraction from Large-Scale Data}{21}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Gaps in the State-of-the-Art of Reduced-Order Modeling}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Lack of Parametric Flow Field Reconstruction}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Under-Exploration of Compressor Applications}{22}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Scarcity of Integrated Geometry and Flow Prediction Models}{22}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Innovations in Physically Consistent Model Training}{23}{subsection.2.2.4}%
+\contentsline {chapter}{\numberline {3}Foundations of Reduced-Order Modeling and Machine Learning in Fluid Dynamics}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1} The Imperative for Model Reduction in Computational Aerodynamics}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dimensionality Reduction for Fluid Flows: Proper Orthogonal Decomposition (POD)}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Theoretical Formulation}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The "Energy-Optimal" Basis}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Implementation and Preprocessing}{26}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Limitations and Future Directions}{26}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Surrogate Modeling for Latent Space Dynamics}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Gaussian Process Regression (GPR)}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Artificial Neural Networks (ANNs)}{28}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Toward Physically Consistent and Interpretable Models}{29}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}The Rise of Physics-Informed Machine Learning (PIML)}{29}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}The Interpretability Imperative}{30}{section.3.5}%
+\contentsline {chapter}{\numberline {4}A Unified Framework for Parametric Field Reconstruction}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Overview of the End-to-End Pipeline}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Stage 1: Parametric Data Generation}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Geometry Parameterization}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Design of Experiments (DoE)}{32}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}High-Fidelity Simulation}{32}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Stage 2: Topological Harmonization via Mesh Morphing}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Stage 3 and 4: The Hybrid POD-ML Regression Pipeline}{34}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Stage 5: Advanced Strategies for Model Training and Validation}{34}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Hyperparameter Optimization (BOHB)}{35}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2} The Hybrid Loss Function for ANNs}{35}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Rigorous Validation Protocols}{35}{subsection.4.5.3}%
+\contentsline {chapter}{\numberline {5}Case Study I: Parametric Reconstruction of 3D Turbomachinery Blade Surfaces}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Problem Definition: Aerodynamics of the NASA Rotor 37}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Application of the POD-GPR Pipeline}{39}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1} Data Generation and Preprocessing}{39}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Mesh Morphing in Action}{39}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3} POD Dimensionality Reduction}{39}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}GPR Surrogate Modeling}{40}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Performance Analysis and Validation}{40}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Qualitative Assessment}{40}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Quantitative Accuracy}{41}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Computational Efficiency}{41}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Discussion}{42}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Case Study II: Multi-Fidelity Reconstruction and Regressor Comparison for 2D Supersonic Nozzle Flows}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Problem Definition: Shock-Wave/Boundary-Layer Interaction in a de Laval Nozzle}{43}{section.6.1}%
+\contentsline {section}{\numberline {6.2}A Comparative Analysis of Surrogate Regressors: ANN vs. GPR}{44}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Dataset Construction}{44}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Hyperparameter Optimization and Training}{44}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Performance Comparison via Cross-Validation}{45}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Noise Robustness Comparison}{46}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Model Interpretability through SHAP Analysis}{47}{subsection.6.2.5}%
+\contentsline {section}{\numberline {6.3}Discussion}{47}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Synthesis, Conclusions, and Future Directions}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Synthesis of Findings: A Unified and Versatile Framework}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Contributions to the Field}{50}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Limitations of the Current Work}{51}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Future Research Directions}{51}{section.7.4}%
+\contentsline {chapter}{Bibliography}{53}{chapter*.20}%
+\contentsline {chapter}{\numberline {A}Mathematical Derivations}{55}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Harmonic Mapping for Mesh Morphing}{55}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Proper Orthogonal Decomposition (POD)}{56}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Gaussian Process Regression (GPR) Predictive Equations}{56}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Gradient of the Hybrid Loss Function for ANNs}{57}{section.A.4}%
+\contentsline {chapter}{\numberline {B}Source Code and Data Availability}{58}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Source Code Availability}{58}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Data Availability}{59}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Pre-trained Models}{59}{section.B.3}%

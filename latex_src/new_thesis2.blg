@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: new_thesis2.aux
+The style file: Bibliografia/abnt2023.bst
+Database file #1: Bibliografia/library2.bib
+Warning--I didn't find a database entry for "PINNs_for_Industrial_Gas_Turbines_2"
+You've used 50 entries,
+            2376 wiz_defined-function locations,
+            844 strings with 12392 characters,
+and the built_in function-call counts, 40856 in all, are:
+= -- 3867
+> -- 369
+< -- 821
++ -- 2411
+- -- 135
+* -- 2354
+:= -- 3613
+add.period$ -- 172
+call.type$ -- 50
+change.case$ -- 446
+chr.to.int$ -- 164
+cite$ -- 50
+duplicate$ -- 5130
+empty$ -- 2290
+format.name$ -- 655
+if$ -- 8391
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 103
+num.names$ -- 250
+pop$ -- 1153
+preamble$ -- 1
+purify$ -- 50
+quote$ -- 0
+skip$ -- 2515
+stack$ -- 0
+substring$ -- 1886
+swap$ -- 3323
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 290
+warning$ -- 0
+while$ -- 311
+width$ -- 0
+write$ -- 52
+(There was 1 warning)

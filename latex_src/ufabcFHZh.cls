@@ -143,10 +143,8 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01] % aaaa / mm / dd
 \ProvidesClass{ufabcFHZh}[\filedate\ \fileversion\ COPPE-UFABC-FHZ Dissertations and Thesis]
 \ProvidesPackage{ufabcFHZh}[\filedate\space\fileversion]
-%\LoadClass[12pt,a4paper,twoside]{book}
-\LoadClass[12pt,a4paper,oneside]{book}
-%\RequirePackage[sort&compress]{natbib}
-%\RequirePackage[alf, abnt-emphasize=bf, abnt-thesis-year=both, abnt-repeated-author-omit=no, abnt-last-names=abnt, abnt-etal-cite=3, abnt-etal-list=3, abnt-etal-text=it, abnt-and-type=e, abnt-doi=doi, abnt-url-package=none, abnt-verbatim-entry=no]{abntex2cite}
+\LoadClass[12pt,a4paper,twoside]{book}
+\RequirePackage[sort&compress]{natbib}
 \RequirePackage{hyphenat}
 \RequirePackage{lastpage}
 \RequirePackage{ifthen}
@@ -238,10 +236,8 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 \newcommand\foreign@countryname{Brazil}
 \newcommand{\@Endereco}{Av. dos Estados, 5001}
 \newcommand{\@CEP}{CEP 09210-580}
-\newcommand{\@EnderecoCompletoUniversidade}{
-	\iftoggle{toggleENTrue}{{\bf\foreign@universityname}, \@Endereco -- \@CEP -- \local@cityname -- \local@statename}{{\bf\foreign@universityname}, \@Endereco -- \@CEP -- \local@cityname -- \local@statename}
-}
-\newcommand{\@Telefone}{\iftoggle{toggleENTrue}{Phone 55 11 4996 0086}{Tel. 0 XX 11 -- 4996 -- 0086}}
+\newcommand{\@EnderecoCompletoUniversidade}{{\bf\local@universityname}, \@Endereco -- \@CEP -- \local@cityname -- \local@statename}
+\newcommand{\@Telefone}{Tel. 0 XX 11 -- 4996 -- 0086}
 \newcommand{\@Site}{www.ufabc.edu.br}
 \newcommand{\@TelefoneSite}{{\bf\@Telefone} -- {\bf\@Site}}
 % ---
@@ -301,7 +297,6 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 \newcommand{\@strTitulo}{T{\' i}tulo}
 % -----
 \newcommand{\@ListaIlustracoes}{Lista de Ilustra{\c c}{\~o}es}
-\newcommand{\@ListaAlgoritmos}{Lista de Algoritmos}
 \newcommand{\glossaryname}{Gloss\'{a}rio} 
 \newcommand{\listabbreviationname}{Lista de Abreviaturas}
 \newcommand{\listsymbolname}{Lista de S{\' i}mbolos}
@@ -348,23 +343,18 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	% ----
 	\renewcommand{\@ListaIlustracoes}{List of Figures}
 	% BATATA
-	\renewcommand{\@ListaAlgoritmos}{List of Algorithms}
 	\renewcommand{\glossaryname}{Glossary} 
 	\renewcommand{\listabbreviationname}{List of Abreviations}
 	\renewcommand{\listsymbolname}{List of Symbols}
 	% BATATA
 	\renewcommand{\@BANCAEXAMINADORA}{EXAMINING BOARD}
-	\renewcommand{\@AssinaturasMembrosBancaExaminado}{Signatures of examining board members, which examinated and approved the defense of}
+	\renewcommand{\@AssinaturasMembrosBancaExaminado}{Signatures of examining board members, which examinated and approved  the defense of}
 	\renewcommand{\@candidato}{candidate}
 	% ---- Texto de Aprovação
 	\renewcommand{\@TextoAprovacao}{%
-		{\@AssinaturasMembrosBancaExaminado}
-		\ifthenelse{\equal{\foreign@degname}{Doctor}}{Doctoral}{\ifthenelse{\equal{\foreign@degname}{Master}}{Master}{}}
-		%:\equal{\MakeLowercase\foreign@degname}{doctor}}
-		%\ifthenelse{\equal{\MakeLowercase\foreign@degname}{master}}{Master}{}
-		%{\MakeLowercase\foreign@degname}
-		{\foreign@doctype} of
-		{\@candidato}\nohyphens{{\@authname} {\@authsurn}} {\@em} {\foreign@monthname} {\ifnum\number\day<10 0\fi}{\number\day}%
+		{\@AssinaturasMembrosBancaExaminado} {\foreign@doctype}
+		{\MakeLowercase\@degreename} 
+		{\@candidato} \nohyphens{{\@authname} {\@authsurn}} {\@em} {\foreign@monthname} {\ifnum\number\day<10 0\fi}{\number\day}%
 		\ifthenelse{\equal{\number\day}{1}\or\equal{\number\day}{21}\or\equal{\number\day}{31}}{%
 			\textsuperscript{st}}{%
 			\ifthenelse{\equal{\number\day}{2}\or\equal{\number\day}{22}}{\textsuperscript{nd}}{%
@@ -377,7 +367,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	}
 	% ---- Texto Apresentação Folha de Rosto
 	\renewcommand{\@TextoApresentacaoFolhaDeRosto}{%
-		{\foreign@doctype} 
+		{\local@doctype} 
 		{presented}
 		\sloppy\nohyphens{{\@AoCurso} \foreign@universityname, {\@ComoParteRequisitos} {\foreign@deptname.\par}}
 	}
@@ -414,14 +404,14 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
   \newcommand{\local@degname}{Mestre}
   \newcommand{\foreign@degname}{Master}
   \newcommand\local@doctype{Dissertação}
-  \newcommand\foreign@doctype{Dissertation}
+  \newcommand\foreign@doctype{Dissertação}
 }
 \DeclareOption{dscexam}{%
   \newcommand{\@degree}{D.Sc.}
   \newcommand{\@degreename}{Doutorado}
   \newcommand{\local@degname}{Doutor}
   \newcommand{\foreign@degname}{Doctor}
-  %\setboolean{maledoc}{true}
+  \setboolean{maledoc}{true}
   \newcommand\local@doctype{Exame de Qualifica{\c c}{\~ a}o}
   \newcommand\foreign@doctype{Qualifying Exam}
 }
@@ -440,9 +430,9 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 \newcommand{\keywordeng}[1]{#1}
 \newcounter{pagenumber_frontmatter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\DeclareOption{numbers}{%
-%  \PassOptionsToPackage{numbers}{natbib}
-%}
+\DeclareOption{numbers}{%
+  \PassOptionsToPackage{numbers}{natbib}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \onehalfspacing
 \DeclareOption{doublespacing}{%
@@ -693,8 +683,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	\@mainmattertrue
 	\makeatletter \let\ps@plain\ps@myheadings \makeatother
 	\thispagestyle{empty}
-	%\pagestyle{myheadings}
-	\pagestyle{headings}
+	\pagestyle{myheadings}
 	\pagenumbering{arabic}
 }
 %%%%%%%%%%% ********** Geração de elementos textuais - Fim
@@ -830,7 +819,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 						\@escritaNomesOrientadorCoorientador % BATATA - Código de geração em separado
 				\end{tabularx}}\par
 				\nohyphens{
-					{\iftoggle{toggleENTrue}{\foreign@doctype}{\local@doctype}} (\iftoggle{toggleENTrue}{\foreign@degname}{\local@degname}) -- %{\MakeLowercase\@degreename}
+					{\iftoggle{toggleENTrue}{\foreign@doctype}{\local@doctype}} ({\@degreename}) -- %{\MakeLowercase\@degreename}
 					{\iftoggle{toggleENTrue}{\foreign@universityname}{\local@universityname}}, {\@Cursoposgradem}
 					{\iftoggle{toggleENTrue}{\foreign@deptname}{\local@deptname}}, {\local@cityname}, {\number\year}.}\par 
 				%\bibname: p. \pageref{bib:begin} -- \pageref{bib:end}.\par % BATATA - Não é necessário indicar as páginas onde estão as referências biliográficas
@@ -1086,7 +1075,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
     \thispagestyle{empty}
     \pagestyle{empty}
 	  %% comentado para não aparecer no Sumário: \addcontentsline
-      \addcontentsline{toc}{chapter}{\listfigurename}%
+      %% \addcontentsline{toc}{chapter}{\listfigurename}%
       \@mkboth{\MakeUppercase\listfigurename}%
               {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
@@ -1105,7 +1094,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
     \thispagestyle{empty} 
     \pagestyle{empty}
       % comentado para não aparecer no Sumário: \addcontentsline
-      \addcontentsline{toc}{chapter}{\listtablename}%
+      %%\addcontentsline{toc}{chapter}{\listtablename}%
       \@mkboth{%
           \MakeUppercase\listtablename}%
          {\MakeUppercase\listtablename}%
@@ -1113,14 +1102,6 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
     \if@restonecol\twocolumn\fi
     }
 %%%%% ========================= Lista de Tabelas - Fim
-
-%%%%% ========================= Lista de Algoritmos - Inicio
-\newcommand\printlistofalgorithms{%
-	\renewcommand{\listalgorithmname}{\@ListaAlgoritmos} % BATATA - Algoritmos
-	\listofalgorithms
-	\addcontentsline{toc}{chapter}{\@ListaAlgoritmos}
-    }
-%%%%% ========================= Lista de Algoritmos - Fim
 
 %%%%% ========================= Lista de símbolos - Inicio
 \newcommand\printlosymbols{%
@@ -1132,8 +1113,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	\immediate\openout\@losfile=\jobname.syx
 	\def\symbl{\@bsphack\begingroup
 		\@sanitize
-		\@wrlos
-		}\typeout
+		\@wrlos}\typeout
 	{Writing index of symbols file \jobname.syx}%
 	\let\makelosymbols\@empty
 }
@@ -1144,13 +1124,13 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 		\def\@wrlos#1#2{%
 			\protected@write\@losfile{}%
 			% Linha que exibe com p. #página
-			{\string\indexentry{[#1] #2 |hyperpage}{\thepage}}%
+			{\string\indexentry{[#1] #2 \dotfill |hyperpage}{\thepage}}%
 			\endgroup
 			\@esphack}
 	}{%
 		\def\@wrlos#1#2{%
 			\protected@write\@losfile{}%
-			{\string\indexentry{[#1] #2 }{\thepage}}%
+			{\string\indexentry{[#1] #2 \dotfill}{\thepage}}%
 			\endgroup
 			\@esphack}
 	}
@@ -1178,13 +1158,13 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	\@ifpackageloaded{hyperref}{%
 		\def\@wrlab#1#2{%
 			\protected@write\@labfile{}%
-			{\string\indexentry{[#1] #2 |hyperpage}{\thepage}}%
+			{\string\indexentry{[#1] #2 \dotfill |hyperpage}{\thepage}}%
 			\endgroup
 			\@esphack}
 	}{%
 		\def\@wrlab#1#2{%
 			\protected@write\@labfile{}%
-			{\string\indexentry{[#1] #2 }{\thepage}}%
+			{\string\indexentry{[#1] #2 \dotfill}{\thepage}}%
 			\endgroup
 			\@esphack}
 	}
@@ -1264,8 +1244,8 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	\@mkboth{\MakeUppercase\glossaryname}%
 	{\MakeUppercase\glossaryname}%
 	\chapter*{\glossaryname}%
-	% Comment to Remove Lista de Sigla e de Abreviações do Sumário
-	\addcontentsline{toc}{chapter}{\glossaryname}
+	% Remove Lista de Sigla e de Abreviações do Sumário
+	%\addcontentsline{toc}{chapter}{\glossaryname}
 	\list{}
 	{\setlength{\listparindent}{0in}%
 		\setlength{\labelwidth}{1.0in}%

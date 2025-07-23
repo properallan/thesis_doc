@@ -1,18 +1,21 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Dissertation Contributions to CFD Vision 2030 Grand Challenges}}{23}{table.caption.9}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces This table provides a comparative overview of Gaussian Process Regression (GPR) and Artificial Neural Networks (ANN), highlighting their fundamental principles, key advantages, inherent limitations, and primary use cases within machine learning applications. This comparison aids in understanding their suitability for different types of data and modeling objectives.}}{29}{table.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Geometric Design Parameters for Rotor 37}}{33}{table.caption.13}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Retained POD Modes for Rotor 37 Fields}}{35}{table.caption.14}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Métricas de Precisão do Modelo Substituto para Rotor 37}}{36}{table.caption.15}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Computational Cost Comparison}}{37}{table.caption.16}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Geometric Design Parameters for Rotor 37}}{38}{table.caption.11}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Retained POD Modes for Rotor 37 Fields}}{40}{table.caption.12}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Métricas de Precisão do Modelo Substituto para Rotor 37}}{41}{table.caption.13}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Computational Cost Comparison}}{42}{table.caption.14}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Nozzle Geometry and Boundary Condition Parameters}}{39}{table.caption.17}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Espaço de Busca de Hiperparâmetros para BOHB}}{40}{table.caption.18}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Melhores Configurações de Redes Neurais Artificiais Encontradas por BOHB}}{40}{table.caption.19}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Métricas de Erro da Validação Cruzada de 5 Dobras (GP vs. ANN)}}{41}{table.caption.20}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Nozzle Geometry and Boundary Condition Parameters}}{44}{table.caption.15}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Espaço de Busca de Hiperparâmetros para BOHB}}{45}{table.caption.16}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Melhores Configurações de Redes Neurais Artificiais Encontradas por BOHB}}{45}{table.caption.17}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Métricas de Erro da Validação Cruzada de 5 Dobras (GP vs. ANN)}}{46}{table.caption.18}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Sumário Comparativo dos Estudos de Caso}}{45}{table.caption.21}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Sumário Comparativo dos Estudos de Caso}}{50}{table.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

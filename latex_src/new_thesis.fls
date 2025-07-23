@@ -13,6 +13,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/bk12.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/bk12.clo
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
@@ -107,8 +109,6 @@ INPUT ./Pacotes/Input_Pacotes.tex
 INPUT ./Pacotes/Input_Pacotes.tex
 INPUT ./Pacotes/Input_Pacotes.tex
 INPUT Pacotes/Input_Pacotes.tex
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
@@ -496,6 +496,8 @@ INPUT ./Pacotes/Input_Pacotes_Listings.tex
 INPUT ./Pacotes/Input_Pacotes_Listings.tex
 INPUT ./Pacotes/Input_Pacotes_Listings.tex
 INPUT Pacotes/Input_Pacotes_Listings.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 OUTPUT new_thesis.syx
 OUTPUT new_thesis.abx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ae/t1aer.fd
@@ -619,10 +621,6 @@ INPUT ./new_thesis.lot
 INPUT ./new_thesis.lot
 INPUT new_thesis.lot
 OUTPUT new_thesis.lot
-INPUT ./new_thesis.loa
-INPUT ./new_thesis.loa
-INPUT new_thesis.loa
-OUTPUT new_thesis.loa
 INPUT ./new_thesis.toc
 INPUT ./new_thesis.toc
 INPUT new_thesis.toc
@@ -633,7 +631,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pzc.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/ae/aeb10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/ae/aesl12.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/ae/aesl12.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/zapfchan/pzcmi7t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -649,10 +646,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/ae/aer10.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/ae/aeb10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/ae/aer10.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/ae/aeb10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/ae/aeb10.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmb10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -690,7 +687,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

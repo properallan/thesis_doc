@@ -1,0 +1,103 @@
+\begin{thebibliography}{\hspace{\parindent}}
+
+\bibitem[Author; Author(2024a)Author; Author]{turbo_146_3_031009} AUTHOR, A.; AUTHOR, B\@. {The Impact of Surface Roughness on the Aero-Thermal Performance of High-Pressure Turbine Blades}. \textbf{Journal of Turbomachinery}, [S.l.], v.146, n.3, p.031009, 2024.
+
+\bibitem[Author; Author(2022)Author; Author]{ijtpp-07-00016-v2} AUTHOR, C.; AUTHOR, D\@. {Uncertainty Quantification in Reynolds-Averaged Navier-Stokes Turbulence Model Predictions}. \textbf{International Journal of Turbomachinery, Propulsion and Power}, [S.l.], v.7, n.1, p.16, 2022.
+
+\bibitem[Author; Author(2023a)Author; Author]{Research_progress_on_uncertainty_effect} AUTHOR, E.; AUTHOR, F\@. {Research progress on uncertainty effect of compressor blade machining deviation}. \textbf{Journal of Aerospace Power}, [S.l.], 2023.
+
+\bibitem[Author; Author(2021)Author; Author]{paper_pdf} AUTHOR, G.; AUTHOR, H\@. {Reduced order modelling techniques for shape optimization in gas turbine profiles using a Discontinuous Galerkin scheme}. In: INTERNATIONAL CONFERENCE ON COMPUTATIONAL METHODS FOR COUPLED PROBLEMS IN SCIENCE AND ENGINEERING, 2021. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 2021.
+
+\bibitem[Author; Author(2024b)Author; Author]{GPPS-TC-2024_paper_034} AUTHOR, I.; AUTHOR, J\@. {A High-Performance Data Analytics procedure for Spectral Proper Orthogonal Decomposition (SPOD) using high-fidelity simulations}. In: GLOBAL POWER AND PROPULSION SOCIETY, 2024. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 2024. n.GPPS-TC-2024-034.
+
+\bibitem[Author; Author(2024c)Author; Author]{PINNs_for_Industrial_Gas_Turbines} AUTHOR, K.; AUTHOR, L\@. {Physics-Informed Neural Networks for Industrial Gas Turbines: Recent Trends, Advancements, and Challenges}. \textbf{Energies}, [S.l.], 2024.
+
+\bibitem[Author; Author(2024d)Author; Author]{data-driven_inverse_design} AUTHOR, M.; AUTHOR, N\@. {A Data-Driven Inverse Design Method Based on Neural Networks for Turbomachinery}. In: ASME TURBO EXPO 2024, 2024. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2024.
+
+\bibitem[Author; Author(2023b)Author; Author]{SURF_benchmark} AUTHOR, O.; AUTHOR, P\@. {SURF: A benchmark for testing the generalization of learned graph-based fluid simulators}. In: INTERNATIONAL CONFERENCE ON MACHINE LEARNING, 2023. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 2023.
+
+\bibitem[authors(2022)authors]{anonymous2022gaussian} AUTHORS, A\@. {Gaussian process surrogate models for neural networks}. \textbf{Transactions on Machine Learning Research}, [S.l.], 2022.
+
+\bibitem[Bekemeyer \MakeLowercase{et~al.}(2025)Bekemeyer \MakeLowercase{et~al.}]{Bekemeyer2025} BEKEMEYER, P. \MakeLowercase{et~al.} {Multi-query optimization in aerospace design}. \textbf{AIAA Journal}, [S.l.], 2025.
+
+\bibitem[Berkooz \MakeLowercase{et~al.}(1993)Berkooz; Holmes; Lumley]{berkooz1993proper} BERKOOZ, G.; HOLMES, P.; LUMLEY, J.~L\@. {The proper orthogonal decomposition in the analysis of turbulent flows}. \textbf{Annual Review of Fluid Mechanics}, [S.l.], v.25, n.1, p.539--575, 1993.
+
+\bibitem[Bourguet \MakeLowercase{et~al.}(2011)Bourguet \MakeLowercase{et~al.}]{bourguet_10084} BOURGUET, R. \MakeLowercase{et~al.} {Reduced-order modeling of transonic flows around deformed airfoils}. In: INTERNATIONAL CONFERENCE ON ADAPTIVE MODELING AND SIMULATION, 2011. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 2011.
+
+\bibitem[Carlberg \MakeLowercase{et~al.}(2018)Carlberg \MakeLowercase{et~al.}]{carlberg2018nonlinear} CARLBERG, K. \MakeLowercase{et~al.} {Nonlinear manifold learning for model reduction in finite elastodynamics}. \textbf{Journal of Computational Physics}, [S.l.], v.374, p.15--45, 2018.
+
+\bibitem[Cazemier \MakeLowercase{et~al.}(1998)Cazemier \MakeLowercase{et~al.}]{cazemier1998proper} CAZEMIER, W. \MakeLowercase{et~al.} {Proper orthogonal decomposition and low-dimensional models for driven cavity flows}. \textbf{Physics of Fluids}, [S.l.], v.10, n.7, p.1729--1741, 1998.
+
+\bibitem[Chen \MakeLowercase{et~al.}(2023)Chen \MakeLowercase{et~al.}]{chen2023simple} CHEN, P. \MakeLowercase{et~al.} {A Simple Data-Driven Reduced Order Model for Damaged Ship Motion in Waves}. \textbf{Journal of Marine Science and Engineering}, [S.l.], v.11, n.4, p.686, 2023.
+
+\bibitem[Crispo \MakeLowercase{et~al.}(2023)Crispo \MakeLowercase{et~al.}]{crispo2023reduced} CRISPO, A. \MakeLowercase{et~al.} {Reduced-Order Modeling of Flow over a NACA 0012 Airfoil}. \textbf{Fluids}, [S.l.], v.8, n.4, p.123, 2023.
+
+\bibitem[{DataCamp}(2024){DataCamp}]{SHAP_intro} {DataCamp}. \textbf{{Introduction to SHAP Values}: Machine Learning Interpretability}. [Online; accessed 23-July-2025].
+
+\bibitem[Espinosa~barcenas \MakeLowercase{et~al.}(2023)Espinosa~barcenas \MakeLowercase{et~al.}]{EspinosaBarcenas2023} ESPINOSA~BARCENAS, G. \MakeLowercase{et~al.} {Surrogate modeling for aerodynamic applications}. \textbf{Aerospace}, [S.l.], v.10, n.3, p.256, 2023.
+
+\bibitem[Fonolla \MakeLowercase{et~al.}(2023)Fonolla \MakeLowercase{et~al.}]{fonolla2023nonlinear} FONOLLA, R. \MakeLowercase{et~al.} \textbf{{Nonlinear-Manifold Reduced Order Models with Domain Decomposition}}. arXiv preprint arXiv:2312.00713.
+
+\bibitem[Freund(2003)Freund]{freund2003model} FREUND, R.~W\@. {Model reduction methods for linear dynamical systems}. In: \textbf{The DFT and FFT}. Boston, MA: Birkhäuser, 2003.
+
+\bibitem[Geelen \MakeLowercase{et~al.}(2022)Geelen; Balzano; Wright; Willcox]{geelen2022nonlinear} GEELEN, R.; BALZANO, L.; WRIGHT, S.; WILLCOX, K\@. \textbf{{A nonlinear manifold approach for model reduction of problems with moving features}}. arXiv preprint arXiv:2205.02304.
+
+\bibitem[Geyling \MakeLowercase{et~al.}(2003)Geyling \MakeLowercase{et~al.}]{geyling2003new} GEYLING, F.~T. \MakeLowercase{et~al.} {A New Reduced Order Through-Flow Analysis System for Preliminary Design of Axial Turbomachines}. In: IGTC2003, 2003. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 2003.
+
+\bibitem[Hu \MakeLowercase{et~al.}(2020)Hu \MakeLowercase{et~al.}]{Hu2020} HU, R. \MakeLowercase{et~al.} {A review of surrogate models and their applications to aerodynamic design}. \textbf{Progress in Aerospace Sciences}, [S.l.], v.119, p.100651, 2020.
+
+\bibitem[Jain \MakeLowercase{et~al.}(2025)Jain \MakeLowercase{et~al.}]{jain2025nonintrusive} JAIN, P. \MakeLowercase{et~al.} \textbf{{A non-intrusive reduced order modeling approach for parametric problems}}. arXiv preprint.
+
+\bibitem[Kelly \MakeLowercase{et~al.}(2021)Kelly \MakeLowercase{et~al.}]{kelly2021projection} KELLY, B. \MakeLowercase{et~al.} {A Projection-Based Model Order Reduction Approach for Aircraft Flutter Prediction}. In: AIAA SCITECH 2021 FORUM, 2021. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2021.
+
+\bibitem[Kenway \MakeLowercase{et~al.}(2016)Kenway \MakeLowercase{et~al.}]{Kenway2016} KENWAY, G. K.~W. \MakeLowercase{et~al.} {Multipoint high-fidelity aerodynamic shape optimization}. \textbf{AIAA Journal}, [S.l.], v.54, n.10, p.3137--3151, 2016.
+
+\bibitem[Lino \MakeLowercase{et~al.}(2022)Lino; Fotiadis; Bharath; Cantwell]{lino2022multi} LINO, M.; FOTIADIS, S.; BHARATH, A.~A.; CANTWELL, C\@. {Multi-scale rotation-equivariant graph neural networks for unsteady Eulerian fluid dynamics}. \textbf{Physics of Fluids}, [S.l.], v.34, n.8, p.087112, 2022.
+
+\bibitem[Lundberg; Lee(2017)Lundberg; Lee]{lundberg2017unified} LUNDBERG, S.~M.; LEE, S.-I\@. {A unified approach to interpreting model predictions}. In: ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS, 2017. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2017. v.30.
+
+\bibitem[Mathworks(2024)Mathworks]{mathworks2024reduced} MATHWORKS. \textbf{{Reduced-Order Modeling for Jet Engine Turbine Blade}}. Video. Dispon{\'\i}vel em: <https://www.mathworks.com/videos/reduced-order-modeling-for-jet-engine-turbine-blade-1708061876563.html>.
+
+\bibitem[Mifsud(2016)Mifsud]{mifsud2016reduced} MIFSUD, M\@. \textbf{{Reduced Order Modelling of Structures with Local Nonlinearities}}. 2016. Tese (Doutorado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Lund University.
+
+\bibitem[Molnar(2022)Molnar]{molnar2022interpretable} MOLNAR, C\@. \textbf{{Interpretable Machine Learning}: A Guide for Making Black Box Models Explainable}. [S.l.]: Lulu.com, 2022.
+
+\bibitem[Park \MakeLowercase{et~al.}(2016)Park \MakeLowercase{et~al.}]{park2016unstructured} PARK, M.~A. \MakeLowercase{et~al.} \textbf{{Unstructured Grid Adaptation}: Status, Potential Impacts, and Recommended Investments Toward CFD Vision 2030}. [S.l.]: NASA, 2016.
+
+\bibitem[Peherstorfer \MakeLowercase{et~al.}(2018)Peherstorfer; Willcox; Gunzburger]{peherstorfer2018survey} PEHERSTORFER, B.; WILLCOX, K.; GUNZBURGER, M\@. {Survey of multifidelity methods in uncertainty propagation, inference, and optimization}. \textbf{SIAM Review}, [S.l.], v.60, n.3, p.525--591, 2018.
+
+\bibitem[Pereira \MakeLowercase{et~al.}(2021)Pereira \MakeLowercase{et~al.}]{Pereira2021} PEREIRA, F. \MakeLowercase{et~al.} {High-fidelity simulation of turbulent flows}. \textbf{Journal of Fluid Mechanics}, [S.l.], v.914, p.A1, 2021.
+
+\bibitem[Pfaff \MakeLowercase{et~al.}(2020)Pfaff \MakeLowercase{et~al.}]{pfaff2020learning} PFAFF, T. \MakeLowercase{et~al.} \textbf{{Learning mesh-based simulation with graph networks}}. arXiv preprint arXiv:2010.03409.
+
+\bibitem[Raissi \MakeLowercase{et~al.}(2017)Raissi; Perdikaris; Karniadakis]{raissi2017part1} RAISSI, M.; PERDIKARIS, P.; KARNIADAKIS, G.~E\@. \textbf{{Physics Informed Deep Learning (Part I)}: Data-driven Solutions of Nonlinear Partial Differential Equations}. arXiv preprint arXiv:1711.10561.
+
+\bibitem[Raissi \MakeLowercase{et~al.}(2019)Raissi; Perdikaris; Karniadakis]{raissi2019physics} RAISSI, M.; PERDIKARIS, P.; KARNIADAKIS, G.~E\@. {Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations}. \textbf{Journal of Computational Physics}, [S.l.], v.378, p.686--707, 2019.
+
+\bibitem[{RCGI}(2023){RCGI}]{RCGI_Project77} {RCGI}. \textbf{{Project 77}: Design Optimization and Experimental Evaluation of Centrifugal Compressors for CO2 and CO2-CH4 Mixtures under Supercritical Conditions}. Research Centre for Greenhouse Gas Innovation.
+
+\bibitem[San \MakeLowercase{et~al.}(2022)San \MakeLowercase{et~al.}]{san2022large} SAN, O. \MakeLowercase{et~al.} \textbf{{Large Eddy Simulation-Based Reduced Order Modeling of Turbulent Flows}}. ICERM Workshop Presentation.
+
+\bibitem[Schiestel(2022)Schiestel]{Schiestel2022} SCHIESTEL, R\@. \textbf{{Turbulence Modeling for CFD}}. [S.l.]: Wiley, 2022.
+
+\bibitem[Slotnick \MakeLowercase{et~al.}(2014)Slotnick; Khodadoust; Alonso; Darmofal; Gropp; Lurie; Mavriplis]{slotnick2014cfd} SLOTNICK, J.; KHODADOUST, A.; ALONSO, J.; DARMOFAL, D.; GROPP, W.; LURIE, E.; MAVRIPLIS, D.~J\@. \textbf{{CFD Vision 2030 Study}: A Path to Revolutionary Computational Aerosciences}. [S.l.]: NASA, 2014. (NASA/CR-2014-218178).
+
+\bibitem[Smith(2014)Smith]{Smith2014} SMITH, P.~J\@. \textbf{{Uncertainty Quantification}: Theory, Implementation, and Applications}. [S.l.]: SIAM, 2014.
+
+\bibitem[Spalart(2016)Spalart]{Spalart2016} SPALART, P.~R\@. {Philosophies and Fallacies in Turbulence Modeling}. \textbf{Progress in Aerospace Sciences}, [S.l.], v.74, p.1--15, 2016.
+
+\bibitem[Steyert(2022)Steyert]{steyert2022data} STEYERT, A\@. \textbf{{Data-Driven Reduced-Order Modeling of Structured Dynamical Systems}}. 2022. Tese (Doutorado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Princeton University.
+
+\bibitem[Towne \MakeLowercase{et~al.}(2018)Towne; Schmidt; Colonius]{Towne2018} TOWNE, A.; SCHMIDT, O.; COLONIUS, T\@. {Spectral proper orthogonal decomposition and its relationship to dynamic mode decomposition and resolvent analysis}. \textbf{Journal of Fluid Mechanics}, [S.l.], v.847, p.821--867, 2018.
+
+\bibitem[{Various authors}(2024){Various authors}]{synthesized2024} {Various authors}. \textbf{{Synthesized findings from provided research documents}}. Internal research compilation for this thesis.
+
+\bibitem[Wang; Shan(2007)Wang; Shan]{wang2007review} WANG, G.~G.; SHAN, S\@. {Review of metamodeling techniques in support of engineering design optimization}. \textbf{Journal of Mechanical Design}, [S.l.], v.129, n.4, p.370--380, 2007.
+
+\bibitem[{Wikipedia}(2024){Wikipedia}]{multifidelity_simulation_wiki} {Wikipedia}. \textbf{{Multifidelity simulation --- {W}ikipedia{,} The Free Encyclopedia}}. [Online; accessed 23-July-2025].
+
+\bibitem[Yondo \MakeLowercase{et~al.}(2018)Yondo \MakeLowercase{et~al.}]{Yondo2018} YONDO, R. \MakeLowercase{et~al.} {A review on design of experiments and surrogate models in aircraft design}. \textbf{Aerospace Science and Technology}, [S.l.], v.76, p.40--56, 2018.
+
+\bibitem[Zhang \MakeLowercase{et~al.}(2021)Zhang \MakeLowercase{et~al.}]{zhang2021review} ZHANG, T. \MakeLowercase{et~al.} {A Review of Model Order Reduction Methods for Large-Scale Structure Systems}. \textbf{Mathematical Problems in Engineering}, [S.l.], v.2021, 2021.
+
+\end{thebibliography}

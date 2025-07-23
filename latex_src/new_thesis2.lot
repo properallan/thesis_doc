@@ -1,0 +1,20 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparative Overview of Deep Learning Architectures for CFD.}}{27}{table.caption.9}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Geometric Design Parameters for Rotor 37}}{48}{table.caption.10}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Retained POD Modes for Rotor 37 Fields}}{50}{table.caption.11}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Métricas de Precisão do Modelo Substituto para Rotor 37}}{51}{table.caption.12}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Computational Cost Comparison}}{52}{table.caption.13}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Nozzle Geometry and Boundary Condition Parameters}}{54}{table.caption.14}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Espaço de Busca de Hiperparâmetros para BOHB}}{55}{table.caption.15}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Melhores Configurações de Redes Neurais Artificiais Encontradas por BOHB}}{55}{table.caption.16}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Métricas de Erro da Validação Cruzada de 5 Dobras (GP vs. ANN)}}{56}{table.caption.17}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Sumário Comparativo dos Estudos de Caso}}{60}{table.caption.18}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

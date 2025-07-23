@@ -1,0 +1,266 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{lmodern}
+
+\geometry{a4paper, margin=1in}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\title{Data-Driven Reduced-Order Modeling for Parametric Flow Reconstruction in Complex Engineering Systems}
+\author{A. M. de Carvalho}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This dissertation presents a comprehensive investigation into the development and application of data-driven, machine learning-based reduced-order models (ML-ROMs) for the rapid and accurate reconstruction of complex fluid flows. This work is contextualized within Project 77 of the Research Centre for Greenhouse Gas Innovation (RCGI), which aims to accelerate the simulation and optimization of centrifugal compressors operating with supercritical CO2 and CO2-CH4 mixtures for carbon capture applications.[1] Addressing the critical technology gaps that currently impede the engineering design process—such as the prediction of turbulent separated flows, the bottleneck of geometry and grid generation for parametric studies, and the extraction of actionable knowledge from large-scale simulation datasets—this research develops and validates a versatile methodological pipeline through a sequence of case studies with escalating complexity.
+
+The first study introduces a novel, fully differentiable ML-ROM framework for reconstructing two-dimensional supersonic nozzle flows characterized by strong shock wave-boundary layer interactions. A key contribution is the development of a hybrid loss function that combines errors in both the low-dimensional latent space and the reconstructed high-dimensional physical space.[1] This reprojection-based loss, implemented differentiably within the machine learning framework, acts as a physical regularizer, compelling the model to preserve high-gradient features, such as shock waves, with greater fidelity. This approach allows for detailed analysis of flow features, like velocity profiles, without explicit training for such tasks.[1]
+
+The second study tackles the formidable challenge of parametric geometric variation in turbomachinery by developing a novel computational pipeline for the NASA Rotor 37 axial compressor. A mesh morphing technique, based on harmonic mapping and structured interpolation, is introduced to create a consistent topological data representation from a set of geometrically varied, unstructured computational fluid dynamics (CFD) snapshots.[1] This enables the application of Proper Orthogonal Decomposition (POD) for dimensionality reduction. The resulting framework is the first of its kind to demonstrate the simultaneous prediction of both surface aerodynamic fields (pressure and temperature) and the underlying three-dimensional blade geometry from a set of abstract design parameters, a significant gap in the current literature.[1] The model achieves exceptional accuracy and a computational speed-up of over four orders of magnitude, presenting a foundational technology for next-generation multidisciplinary design analysis and optimization (MDAO) by circumventing the traditional meshing bottleneck.[1]
+
+Collectively, these contributions advance the state-of-the-art by demonstrating methodologies that enhance the physical fidelity, geometric versatility, and computational efficiency of surrogate models, providing a tangible pathway toward the simulation-driven design of advanced energy and propulsion systems.
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{The Grand Challenge: The Multi-Query Bottleneck in Computational Engineering}
+
+In the modern era of engineering design, particularly in fields such as energy systems, turbomachinery, and process engineering, Computational Fluid Dynamics (CFD) has become an indispensable tool for analysis and design.[1] High-fidelity numerical models, such as those based on the Reynolds-Averaged Navier-Stokes (RANS) equations, offer remarkable precision in predicting the behavior of fluid flows. This capability allows engineers to investigate complex physical phenomena—from turbulent mixing in a chemical reactor to the intricate shock structures within a supercritical CO2 compressor—with a level of detail that is often hard to achieve through physical experimentation alone.
+
+However, the high fidelity of these simulations comes at a price: computational expense. Solving the governing equations of fluid motion across complex geometries discretized into millions or even billions of grid cells requires immense computational resources and can take hours, days, or even weeks on high-performance computing (HPC) clusters.[1] While the cost of a single simulation may be justifiable for final design verification, it becomes prohibitive in the context of the modern engineering design cycle. The core challenge is not merely that a single CFD simulation is slow, but that contemporary design and analysis workflows are inherently "multi-evaluation" or "multi-query" in nature.[2]
+
+Tasks such as design space exploration, shape optimization, uncertainty quantification (UQ), and sensitivity analysis require the evaluation of hundreds, if not thousands, of design variations.[3] This "multi-evaluation bottleneck" represents a fundamental barrier to innovation, slowing down the design cycle and limiting the ability of engineers to explore novel concepts or quantify risks effectively.[1]
+
+This research is directly motivated by these challenges, framed within the context of Project 77 of the Research Centre for Greenhouse Gas Innovation (RCGI). The project's primary objective is to accelerate the design and optimization of centrifugal compressors for supercritical CO2 and CO2-CH4 mixtures, which are critical technologies for carbon capture, utilization, and storage (CCS).[1] The path to simulating these complex machines requires a foundational methodology capable of handling representative physical phenomena—such as compressibility, high Reynolds numbers, turbulence, and complex geometric variations—in a computationally efficient manner.
+
+\section{A Data-Driven Paradigm: Reduced-Order Models (ROMs)}
+
+To overcome the multi-evaluation bottleneck, a paradigm shift is required, moving away from the direct, repeated use of high-fidelity models. The strategic solution lies in the development of surrogate models, also known as Reduced-Order Models (ROMs).[4] A ROM is a computationally inexpensive, data-driven approximation of the complex, high-fidelity model. By learning the input-output relationship from a limited set of pre-computed high-fidelity simulations, a surrogate can provide near-instantaneous predictions for new design points, effectively replacing the expensive CFD solver within the multi-evaluation loop.[5, 2]
+
+The construction of a machine learning-based ROM (ML-ROM) for a parametric system typically follows a structured "offline-online" pipeline. In the offline stage, a set of computationally expensive, high-fidelity simulations is performed to generate a database of "snapshots." This database is then used to train the ROM, which often involves dimensionality reduction (e.g., with Proper Orthogonal Decomposition) and regression (e.g., with Neural Networks or Gaussian Processes). Once trained, the ROM can be deployed in the online stage, where it provides extremely fast approximations for new, unseen parameter inputs.[1]
+
+\section{Thesis Objectives and Contributions}
+
+The primary objective of this dissertation is to develop, validate, and analyze a unified and robust framework for creating parametric reduced-order models for complex fluid dynamics problems, with the ultimate goal of enabling the efficient design of advanced turbomachinery. This work aims to move beyond ad-hoc solutions and establish a comprehensive methodology that addresses critical gaps in the existing literature. The research is structured as a progression of case studies with increasing complexity, chosen to be computationally tractable while serving as fundamental steps toward the final objective.
+
+The key contributions of this dissertation, which collectively advance the state-of-the-art in data-driven modeling, are as follows:
+
+\begin{itemize}
+    \item \textbf{A Differentiable, Physics-Informed Training Framework:} The development of a novel hybrid loss function for ANN-based ROMs that combines errors in both the latent and reconstructed physical spaces. This fully differentiable, reprojection-based loss acts as a physical regularizer, improving the model's ability to capture high-gradient features like shock waves without requiring explicit PDE constraints.[1] This was demonstrated on a supersonic nozzle case, a flow that exhibits representative phenomena such as compressibility, adverse pressure gradients, and shock-boundary layer interaction.
+    \item \textbf{Enabling Technology for 3D Parametric Geometries:} The introduction and validation of a mesh morphing technique, based on harmonic mapping, as a critical enabling technology.[1] This method resolves the fundamental challenge of topological inconsistency in parametric studies, allowing the direct application of POD to complex 3D geometries with varying shapes, as demonstrated in the NASA Rotor 37 case study.
+    \item \textbf{Integrated Geometry and Flow Field Prediction:} The development of a novel surrogate model that simultaneously predicts both the high-dimensional aerodynamic fields and the underlying 3D physical geometry from a set of abstract design parameters.[1] This represents a significant step towards truly generative design and MDAO, addressing a major gap in the literature where geometry is almost universally treated as a fixed input.
+    \item \textbf{Systematic Positioning within the State-of-the-Art:} A comprehensive literature review that positions this work as a direct response to key challenges in computational science, such as those outlined in the "CFD Vision 2030 Study" [1], and fills identified gaps regarding the scarcity of parametric flow field reconstruction, the under-exploration of compressor applications, and the lack of integrated geometry-flow models.
+\end{itemize}
+
+\section{Dissertation Outline}
+
+This dissertation is structured to guide the reader from foundational concepts to advanced applications.
+\begin{itemize}
+    \item \textbf{Chapter 2} provides a comprehensive review of the state-of-the-art, establishing the strategic context for this research by aligning it with the grand challenges of computational science and identifying specific gaps in the academic literature on reduced-order modeling.
+    \item \textbf{Chapter 3} presents the first major case study, applying the framework to the parametric reconstruction of 2D supersonic nozzle flows, with a focus on the development of the hybrid loss function and a comparative analysis of surrogate regressors.
+    \item \textbf{Chapter 4} presents the second case study, tackling the parametric reconstruction of 3D surface fields and geometry on the NASA Rotor 37, with a focus on the critical role of the mesh morphing technique.
+    \item \textbf{Chapter 5} synthesizes the findings from both case studies, summarizes the key contributions of the dissertation, discusses its limitations, and proposes promising directions for future research.
+\end{itemize}
+
+\chapter{A Review of the State-of-the-Art in Computational Science and Reduced-Order Modeling}
+
+\section{The Grand Challenges of Modern Computational Simulation}
+
+To effectively position the contributions of this dissertation, it is essential to understand the strategic landscape of computational science. The "CFD Vision 2030 Study," a comprehensive roadmap from the aerospace community, provides an authoritative framework by articulating the grand challenges and critical technology gaps that must be overcome to enable a revolutionary leap in simulation-based engineering.[1] While originating in aerospace, these challenges are universal to any field relying on high-fidelity CFD, including the energy and turbomachinery sectors central to this thesis. This section analyzes these key challenges and establishes how the methodologies developed herein directly address them.
+
+\subsection{Physical Modeling of Complex Flows}
+The Vision 2030 study identifies the inability to accurately and reliably predict turbulent flows with significant separation as the single most critical pacing item in CFD.[1] This deficiency limits simulation to near-design conditions and hampers the development of advanced systems operating in complex, off-design regimes. This dissertation contributes to this area by demonstrating that ML-ROMs can serve as a powerful tool for modeling such complex physics. The nozzle study presented in Chapter 3 specifically uses a flow case with strong shock wave-boundary layer interaction (SWBLI)—a canonical example of separated flow—as a rigorous benchmark to validate the surrogate model's predictive capabilities.[1] Furthermore, the work on the NASA Rotor 37 in Chapter 4 tackles the inherently complex, three-dimensional, and shock-laden flow field of a transonic axial compressor, demonstrating the applicability of these methods to industrially relevant problems where accurate physical modeling is paramount.[1]
+
+\subsection{The Geometry and Grid Generation Bottleneck}
+The Vision 2030 report unequivocally frames geometry preprocessing and mesh generation as a primary bottleneck in the entire CFD workflow, often consuming the majority of engineering time.[1] This problem is severely exacerbated in the context of parametric studies and MDAO, where hundreds or thousands of geometric variants must be meshed and simulated. The research presented in Chapter 4 offers a novel and direct solution to this challenge. The proposed mesh morphing pipeline provides a method to bypass the remeshing step entirely for a given class of geometric variations.[1, 6, 7] By creating a consistent, regularized data structure, it enables the direct parametric mapping from design variables to flow solutions, effectively eliminating the meshing bottleneck within an optimization or design exploration loop.
+
+\subsection{Knowledge Extraction from Large-Scale Data}
+With the advent of petascale and exascale computing, the volume of data generated by CFD simulations is becoming overwhelming. The Vision 2030 study highlights the urgent need for technologies that can distill these massive datasets into "knowledge"—that is, compact, predictive, and interpretable models that can inform engineering decisions in real-time.[1] ML-ROMs are the quintessential embodiment of this goal. The frameworks developed in this thesis transform large ensembles of high-fidelity RANS solutions into lightweight surrogate models that can be evaluated in milliseconds, with reported computational speed-ups reaching as high as 7,374x for the nozzle study and 12,000x for the compressor study.[1, 1]
+
+\section{Gaps in the State-of-the-Art of Reduced-Order Modeling}
+
+While ROMs are a promising field, a review of the current literature reveals several critical gaps that this dissertation aims to address.
+
+\subsection{Lack of Parametric Flow Field Reconstruction}
+A significant portion of the existing literature on surrogate modeling, particularly in turbomachinery, focuses on predicting low-dimensional, integrated quantities of interest, such as efficiency, pressure ratio, or stall margin.[8, 9, 10] While valuable for system-level analysis, this approach discards the vast majority of the spatial information contained within the full flow field. There remains a significant need for robust methodologies that can accurately reconstruct the entire high-dimensional flow field (e.g., pressure, temperature, velocity) parametrically.[5, 11, 2] Such models are essential for detailed design, allowing engineers to analyze features like shock position, boundary layer separation, and wake structures without running a new CFD simulation.[12] This thesis directly addresses this gap by developing frameworks explicitly for the parametric reconstruction of 2D and 3D fields.
+
+\subsection{Under-Exploration of Compressor Applications}
+While ROMs have been applied to various turbomachinery problems, the academic literature shows a strong focus on turbine applications or aeroelastic phenomena such as flutter.[13, 14, 15, 16] There is a notable scarcity of parametric studies dedicated to the complex, three-dimensional aerodynamics of axial compressors, which are critical components in modern propulsion and power generation systems.[17, 18, 19, 20, 21] The development of predictive models for compressors represents a challenging and underexplored frontier for ML-ROMs, and the work on the Rotor 37 in Chapter 4 makes a direct contribution to this area.
+
+\subsection{Scarcity of Integrated Geometry and Flow Prediction Models}
+Existing surrogate models almost universally assume a fixed computational domain or require a separate, often manual, process to generate the geometry and mesh for each new set of design parameters.[11, 22] A truly transformative step towards automated MDAO would be a model capable of simultaneously predicting both the aerodynamic fields and the underlying physical geometry from a set of abstract design variables. Such models are exceptionally rare in the literature and represent a critical research gap.[1] The framework developed in Chapter 4, which predicts both the 3D blade coordinates and the surface pressure and temperature fields, is a novel contribution that directly addresses this deficiency.
+
+\subsection{Innovations in Physically Consistent Model Training}
+A central challenge in data-driven modeling is ensuring that predictions are not only mathematically accurate but also physically consistent. This has led to the burgeoning field of physics-informed machine learning (PIML), most prominently through Physics-Informed Neural Networks (PINNs), which incorporate the governing PDE residuals into the loss function.[23, 24, 25, 26] While powerful, this approach can be complex to implement and computationally expensive to train.
+
+The hybrid loss function developed in the nozzle study [1] represents a novel and pragmatic implementation of this philosophy. Standard loss functions for POD-based ROMs operate exclusively in the low-dimensional latent space.[27, 28] However, this provides no guarantee about the quality of the final, reconstructed high-dimensional field. Our loss function incorporates a differentiable physical-space reprojection term, which penalizes the error in the fully reconstructed flow field. This forces the neural network to learn a latent space representation that is not just mathematically optimal but also physically reconstructible, improving the model's ability to capture high-gradient features like shock waves.[1] This approach acts as a powerful physical regularizer without the full computational overhead of a traditional PINN approach.
+
+\chapter{Case Study I: A Differentiable, Reprojection-Based Framework for Reconstructing Nonlinear Nozzle Flows}
+
+This first case study serves to develop and validate the core machine learning architecture of the proposed framework. The focus is on a problem with complex but geometrically simple flow physics: the two-dimensional supersonic flow through a de Laval nozzle. This problem is characterized by the formation of strong shock waves and their interaction with the boundary layer (SWBLI), a highly nonlinear phenomenon.[1] This chapter, based on the research in [1], validates the framework's versatility, performs a deep, systematic comparison between GPR and ANN as surrogate regressors, and introduces a novel hybrid loss function for ANNs, leveraging SHAP analysis to connect data-driven predictions with physical understanding.
+
+\section{Problem Definition: Shock-Wave/Boundary-Layer Interaction in a de Laval Nozzle}
+
+The flow of a supersonic hot gas stream through a de Laval nozzle is a canonical problem in propulsion and high-speed aerodynamics. The expansion of the flow in the divergent section can lead to complex phenomena, including the formation of oblique and normal shock waves, flow separation, and significant thermal effects. The interaction between these shock waves and the viscous boundary layer at the nozzle wall is a particularly challenging phenomenon to model accurately, as it governs nozzle performance and efficiency.[1]
+
+To create a rich testbed for surrogate modeling, a dual-fidelity numerical setup was established. High-fidelity ground-truth data was generated by solving the 2D steady-state RANS equations using the open-source SU2 CFD solver, which accounts for viscous and thermal effects. For comparison, and to test the model's ability to learn from simplified physics, a low-fidelity representation was created using a custom-developed solver for the quasi-1D Euler equations.[1]
+
+The problem was parameterized by varying four key inputs: the inlet total pressure ($p_0$), the inlet total temperature ($T_0$), the nozzle divergence angle ($\theta_{\text{div}}$), and, in some cases, a prescribed wall temperature ($T_w$). The ranges for these parameters were chosen to induce a variety of flow regimes, from fully expanded to over- or under-expanded flows with different shock structures.[1]
+
+\section{A Novel Hybrid Loss Function for Enhanced Physical Fidelity}
+
+A cornerstone of this study is the introduction of a novel loss function for training the ANN models. A standard approach is to minimize the Mean Squared Error (MSE) between the predicted and true POD coefficients in the low-dimensional latent space.[27, 28] While computationally efficient, this provides no direct control over the error in the final, reconstructed physical flow field. For flows with highly nonlinear features like shock waves, small errors in the latent space can amplify into large, physically significant errors upon reconstruction.
+
+To address this, a hybrid loss function was formulated to combine errors from both the latent and physical spaces. The total loss, $\mathcal{L}$, is a convex combination of two terms: a reduced loss, $\mathcal{L}_{reduced}$, and a reconstructed loss, $\mathcal{L}_{reconstructed}$, weighted by a tunable hyperparameter $w_{recon}$ [1]:
+$$\mathcal{L} = w_{recon}\mathcal{L}_{reduced} + (1 - w_{recon})\mathcal{L}_{reconstructed}$$
+Here, $\mathcal{L}_{reduced}$ is the standard MSE of the coefficients, while $\mathcal{L}_{reconstructed}$ is the MSE calculated on the fully reconstructed physical fields after applying the inverse POD transform. The key innovation is that the entire pipeline, including the final reconstruction step, is implemented as a fully differentiable computational graph.[1] This allows the gradients of the physical-space reconstruction error to be backpropagated through the network during training. This formulation forces the ANN to learn a latent space representation that is not only accurate in a least-squares sense but also robust to the reconstruction process, thereby promoting higher physical fidelity in the final output.[1]
+
+\section{A Comparative Analysis of Surrogate Regressors: ANN vs. GPR}
+
+A central goal of this case study was to rigorously compare the performance of Artificial Neural Networks and Gaussian Processes as the latent-space regressor. A suite of twelve distinct case studies was designed, varying boundary conditions, dataset size, and input format to allow for a nuanced analysis of how each model performs under different data conditions.[1]
+
+\subsection{Performance Comparison via Cross-Validation}
+
+To robustly assess generalization performance, a 5-fold cross-validation was conducted for all cases. The results revealed a clear and nuanced trade-off. While GP models often achieved slightly lower mean NRMSE values, particularly with larger, cleaner datasets, the ANN models consistently delivered higher R$^2$ scores and, critically, exhibited much lower variance across the folds.[1] This indicates that while GPRs can be highly accurate, they are sensitive to the specific training split and are at a higher risk of poor generalization when the training data is limited. ANNs, when properly regularized and tuned, appear to be the more robust and reliable choice, especially for exploratory studies or problems with constrained data budgets.
+
+\subsection{Model Interpretability through SHAP Analysis}
+
+To move beyond simple error metrics and build trust in the models, SHAP analysis was used to interpret their predictions. For models trained on scalar inputs, the analysis confirmed physical intuition: the inlet total pressure ($p_0$) was by far the most influential feature.[1]
+
+For models trained on field-based inputs (i.e., the POD coefficients of the low-fidelity 1D solution), the SHAP analysis revealed a deeper distinction. The GP model's feature importance dropped off rapidly with the mode number, indicating it relied almost exclusively on the large-scale, global flow structures. The ANN model, however, assigned significant importance to certain mid- and low-energy modes.[1] In POD, the low-energy modes encode the fine-scale, localized, high-frequency details of the flow field, such as shock waves. The fact that the ANN learns to leverage these low-energy modes explains its superior ability to reconstruct sharp, nonlinear features.
+
+\subsection{Analysis of Reconstructed Flow Fields and Features}
+
+The ultimate test of the surrogate models is their ability to accurately reconstruct the spatial structures of the flow field. Both models successfully captured the main features, but the ANN reconstruction of the shock structure was visibly sharper and more defined, whereas the GP prediction tended to smear the discontinuity.[1]
+
+Crucially, the trained model can be used to analyze specific flow features without having been explicitly trained for them. For instance, velocity profiles can be extracted from the reconstructed fields to study the effects of the shock-boundary layer interaction. The predicted profiles clearly show the distortions near the wall characteristic of a Free Shock Separation (FSS) regime, demonstrating the model's utility not just for visualization but for detailed engineering analysis.[1]
+
+\chapter{Case Study II: Parametric Reconstruction of 3D Turbomachinery Blade Surfaces and Geometry}
+
+This chapter presents the second major validation of the unified framework, applying it to a more complex problem: the parametric reconstruction of pressure and temperature fields and the physical geometry on the surfaces of the NASA Rotor 37 compressor blade. This case study serves to demonstrate the framework's capability to handle complex, three-dimensional turbomachinery flows and, most critically, showcases the indispensable role of the mesh morphing pipeline in enabling the application of POD to parametric geometries.[1] The work detailed here is based on the research presented in.[1]
+
+\section{The Challenge of Parametric Geometric Variation}
+
+The design of modern turbomachinery components, such as the blades of an axial compressor, is a complex, high-dimensional optimization problem. To explore the design space effectively, engineers must evaluate the aerodynamic performance of numerous geometric variations. The NASA Rotor 37, a transonic axial compressor rotor, serves as a canonical benchmark for validating CFD codes in this domain due to its complex flow physics.[1]
+
+In this study, the Rotor 37 blade geometry was parameterized using 28 design variables. A dataset of 410 simulations was generated, with each simulation corresponding to a unique blade geometry. The core problem arises here: each of these simulations is performed on a unique, unstructured mesh. This results in a dataset where each snapshot of pressure or temperature data has a different number of points and lacks any point-to-point correspondence with the other snapshots.[1] This inconsistency is a fatal flaw for dimensionality reduction techniques like POD, which require a consistent data structure. This "meshing bottleneck" for parametric studies is a major impediment identified in the CFD Vision 2030 study, and solving it is the primary objective of this work.[1]
+
+\section{A Mesh Morphing Pipeline for Consistent Data Representation}
+
+To overcome the challenge of inconsistent mesh topologies, a novel mesh morphing pipeline was developed. This multi-step process transforms the raw, irregular surface mesh data from each CFD simulation into a common, regularized format, thereby creating a consistent data structure suitable for POD.[1, 6, 7] The pipeline consists of three main stages:
+
+\begin{enumerate}
+    \item \textbf{Harmonic Mapping (3D-to-2D Projection):} The 3D surface mesh of the blade is "unfolded" onto a simple, two-dimensional unit square by computing a harmonic map, which is the solution to Laplace's equation. This effectively flattens the complex 3D blade surface into a 2D plane without creating overlaps or excessive distortion.[1]
+    \item \textbf{Structured Interpolation:} Once all blade surfaces from the dataset are mapped to the same 2D parametric domain, a single, structured regular grid (e.g., $100 \times 100$ points) is defined on this domain. For each snapshot, the associated data fields—surface pressure, surface temperature, and, crucially, the original 3D vertex coordinates (X, Y, Z)—are interpolated from the irregular mapped vertices onto this common structured grid.[1]
+    \item \textbf{3D Reconstruction (Lifting):} The interpolated 3D coordinates now form the vertices of a new, regularized 3D mesh that has a consistent topology for every single geometric instance in the dataset.[1]
+\end{enumerate}
+
+This pipeline effectively creates a "canonical" representation of the blade data, enabling the valid application of POD and other data analysis techniques.
+
+\section{Integrated Prediction of Aerodynamic Fields and Blade Geometry}
+
+With the dataset transformed into a consistent format, a POD-based surrogate model was constructed using Gaussian Process Regression (GPR). A unique and powerful aspect of this study is the application of this framework not only to the aerodynamic fields but also to the geometry itself. Separate POD bases and sets of GPR models were developed for surface pressure, surface temperature, and the blade's X, Y, and Z coordinates.[1]
+
+This means the final surrogate model learns the complete mapping from the 28 abstract geometric design parameters to a full, high-resolution representation of both the physical shape of the blade and the aerodynamic fields on its surface. This integrated prediction capability represents a foundational enabler for truly generative MDAO, as it replaces both the CFD solver and the CAD/meshing tool within an optimization loop, a significant advance over existing methods.[1, 1]
+
+\section{Validation and Performance Assessment}
+
+The accuracy of the integrated POD-GPR surrogate model was rigorously assessed using a validation set of 41 unseen geometric configurations. The results demonstrate exceptional fidelity for all predicted quantities.
+
+The reconstruction of the blade geometry itself was nearly perfect, achieving $R^2$ values exceeding 0.999 and NRMSE values of approximately 0.1\%.[1] The predictions for the aerodynamic fields were also highly accurate, with $R^2$ values consistently above 0.95 for both pressure and temperature fields.
+
+The primary benefit of this framework lies in its computational efficiency. A single high-fidelity RANS simulation required approximately 10 minutes on an HPC cluster. In contrast, the trained POD-GPR surrogate model could generate the full 3D geometry and associated aerodynamic fields in approximately 0.05 seconds on a standard desktop machine. This represents a computational speed-up of 12,000x, enabling the near-instantaneous evaluation of new designs.[1]
+
+\chapter{Synthesis, Conclusions, and Future Directions}
+
+\section{Synthesis of Contributions}
+
+This dissertation has presented the development, validation, and in-depth analysis of a unified framework for creating data-driven, parametric reduced-order models for complex fluid dynamics problems. By integrating advanced techniques in mesh processing, dimensionality reduction, and machine learning, the framework provides a robust and adaptable pipeline for accelerating computationally intensive design and analysis tasks. The efficacy of this framework was demonstrated through two distinct case studies of escalating complexity, the results of which highlight its power and versatility.
+
+The first case study, focusing on 2D supersonic nozzle flow, established a robust ML architecture for handling complex physics, namely shock-wave/boundary-layer interaction. The central innovation in this context was the development of a novel, differentiable hybrid loss function that incorporates a physical-space reprojection term.[1] This method was shown to act as a powerful physical regularizer, improving the model's ability to capture high-gradient, nonlinear phenomena with high fidelity.
+
+The second case study, centered on the 3D flow over a NASA Rotor 37 blade, tackled the critical challenge of parametric geometric variation. The mesh morphing pipeline based on harmonic mapping successfully resolved the fundamental problem of topological inconsistency, enabling the application of POD to a set of geometrically varying 3D surface meshes.[1] This led to the creation of a first-of-its-kind surrogate model capable of simultaneously predicting both the aerodynamic fields and the underlying 3D geometry, a significant advance toward generative design methodologies.
+
+Taken together, these two case studies demonstrate that a single, unified framework can be successfully adapted to fundamentally different engineering problems. The framework's modularity allows a practitioner to select the most appropriate components based on the specific physical and data-related challenges of the application.
+
+\section{Implications for Engineering Design and Future Systems}
+
+The methodologies and results presented in this dissertation have direct and significant implications for the future of simulation-based engineering, particularly in the context of the RCGI's goal of designing advanced compressors for CCS technologies.[1] The work provides tangible progress across several key technology areas identified as critical for the future of the field.[1]
+
+\begin{itemize}
+    \item \textbf{Physical Modeling:} The success of the nozzle study in capturing SWBLI demonstrates that ML-ROMs, when trained with physics-aware loss functions, can be a viable tool for modeling the complex, separated flows that remain a grand challenge for conventional RANS methods.
+    \item \textbf{Geometry/Grid Generation and MDAO:} The Rotor 37 study presents a practical and powerful solution to the meshing bottleneck that plagues parametric design. By creating a model that bypasses the need for repeated meshing and even predicts the geometry itself, this work provides a foundational technology for the next generation of MDAO frameworks.
+    \item \textbf{Knowledge Extraction and Effective HPC Utilization:} The extreme computational speed-ups achieved in both studies (up to 12,000x) are the very definition of knowledge extraction.[1, 1] They transform computationally prohibitive, large-scale datasets into fast, queryable models, enabling the large-scale parametric sweeps and uncertainty quantification analyses that are essential for modern design.
+\end{itemize}
+
+\section{Limitations and Future Research Directions}
+
+Despite its successes, it is important to acknowledge the limitations of the current framework, which point toward important areas for future research.
+
+\begin{itemize}
+    \item \textbf{POD Linearity:} The framework's reliance on POD, a linear dimensionality reduction method, is its most significant theoretical limitation. For problems dominated by transport or advection, a linear basis like POD can be inefficient.
+    \item \textbf{Steady-State Focus:} The current work is validated exclusively for steady-state RANS simulations. The prediction of unsteady flows presents an additional layer of complexity.
+    \item \textbf{Data Generation Cost:} While the framework dramatically accelerates the "online" prediction phase, it still depends on an expensive "offline" data generation phase that requires numerous high-fidelity CFD simulations.
+\end{itemize}
+
+These limitations suggest several promising directions for future research that can build directly upon the foundation laid in this dissertation.
+
+\begin{itemize}
+    \item \textbf{Nonlinear Dimensionality Reduction:} A natural extension would be to replace the linear POD with a nonlinear technique like a Convolutional Autoencoder (CAE), which could capture the intrinsic nonlinear solution manifold more efficiently.
+    \item \textbf{Modeling Unsteady Flows:} To address unsteady problems, the current framework could be extended by integrating a time-series forecasting model, such as a Recurrent Neural Network (RNN) or a Transformer architecture, to predict the temporal evolution of the modal coefficients.
+    \item \textbf{Application to Centrifugal Compressors:} The immediate next step is to apply the validated pipeline to the ultimate target of the RCGI project: the simulation and optimization of centrifugal compressors operating with supercritical CO2, leveraging the lessons learned from both the nozzle and axial compressor case studies.
+    \item \textbf{Advanced Physics-Informed Models:} The hybrid loss function represents a "soft" physical constraint. A more rigorous approach would be to develop Physics-Informed Neural Networks (PINNs) for this framework, incorporating the governing PDE residuals directly into the loss function to improve data efficiency and generalization further.[23, 25, 26]
+\end{itemize}
+
+In conclusion, this dissertation has demonstrated that thoughtfully designed ML-ROM frameworks can provide powerful solutions to some of the most pressing challenges in computational engineering. By continuing to innovate in the areas of physical fidelity, geometric handling, and integration with design processes, these data-driven methods will play an indispensable role in realizing the future of simulation-based engineering for sustainable energy systems.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{99}
+    \bibitem{SD0} A. M. de Carvalho, L. O. Salviano, W. G. Ferreira, A. C. Nogueira Junior, J. I. Yanagihara, and D. J. Dezan. Machine-Learning Based Reduced Order Model for Nonlinear Nozzle Flows Reconstruction. *Preprint submitted to Engineering Applications of Artificial Intelligence*, 2025.
+    \bibitem{SD1} A. M. de Carvalho, D. Z. Lima, J. C. da Costa Filho, W. G. Ferreira, D. J. Dezan, and J. I. Yanagihara. Parametric Reconstruction of Pressure and Temperature Fields on Rotor 37 Blade Surfaces Using Mesh Morphing and POD-GPR. In *28th ABCM International Congress of Mechanical Engineering (COBEM 2025)*, 2025.
+    \bibitem{SD2} J. Slotnick, A. Khodadoust, J. Alonso, D. Darmofal, W. Gropp, E. Lurie, and D. Mavriplis. CFD Vision 2030 Study: A Path to Revolutionary Computational Aerosciences. *NASA/CR-2014-218178*, 2014.
+    \bibitem{SS7} S. Chakraborty, S. Balasubramanian, and S. Arun-Kumar. Data-Driven Surrogate Modeling Approaches for Parametric Prediction and Uncertainty Quantification of Fluid Flows. *AIAA Scitech 2023 Forum*, 2023.
+    \bibitem{SS13} K. Willcox, J. Peraire, and J. D. Paduano. Application of model reduction to compressor aeroelasticity. *Computers \& Fluids*, 31(3):369–389, 2002.
+    \bibitem{SS14} K. Washabaugh, D. Amsallem, M. Zahr, and C. Farhat. Nonlinear Model Reduction for CFD Problems Using Local Reduced-Order Bases. *AIAA Paper 2012-2686*, 42nd AIAA Fluid Dynamics Conference, June 2012.
+    \bibitem{SS17} G. Rozza, F. Ballarin, and G. Stabile. Reduced Order Methods for Parametrized Problems in Computational Fluid Dynamics. *In Reduced Order Modeling and Numerical Simulation for Fluid Dynamics*, pages 1-76, 2023.
+    \bibitem{SS21} S. Lee, K. Jang, H. Cho, and S. Shin. Parametric non-intrusive model order reduction for flow-fields using unsupervised machine learning. *Flow Turbulence and Combustion*, 2025.
+    \bibitem{SS22} M. P. Rumpfkeil and D. J. Mavriplis. Efficient Hessian Calculations Using Automatic Differentiation and the Adjoint Method with Applications. *AIAA Journal*, 48, pp. 2406-2417, 2008.
+    \bibitem{SS23} M. Raissi, P. Perdikaris, and G.E. Karniadakis. Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. *Journal of Computational Physics*, 378:686-707, 2019.
+    \bibitem{SS25} S. Cai, Z. Wang, S. Wang, P. Perdikaris, and G. E. Karniadakis. Physics-informed neural networks for heat transfer problems. *Journal of Heat Transfer*, 143(6), 2021.
+    \bibitem{SS43} MathWorks. What Are Physics-Informed Neural Networks (PINNs)? *mathworks.com*. Accessed July 2024.
+    \bibitem{SS46} T. Bui-Thanh and K. Willcox. A projection-based approach for uncertainty quantification in unsteady aerodynamic applications. *AIAA Journal*, 46(9):2249-2263, 2008.
+    \bibitem{SS47} U. Cella, M. V. Salvatori, and E. F. Campana. Geometric Parameterization Strategies for shape Optimization Using RBF Mesh Morphing. *Journal of Computing and Information Science in Engineering*, 16(2), 2016.
+    \bibitem{SS49} RBF Morph. RBF Morph: Mesh Morphing and Shape Optimization. *rbf-morph.com*. Accessed July 2024.
+    \bibitem{SS54} S. Cuomo, V. Schiano, and G. Discetti. Scientific Machine Learning through Physics–Informed Neural Networks: A Review. *Journal of Computing and Information Science in Engineering*, 23(4), 2023.
+    \bibitem{SS59} N. A. Nemati and N. Jahangirian. A Deep Learning Approach for Prediction of Aerodynamic Turbulent Flow Field over Airfoils. *ICAS 2024*, 2024.
+\end{thebibliography}
+
+\end{document}

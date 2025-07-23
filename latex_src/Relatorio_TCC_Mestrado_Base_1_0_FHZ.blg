@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Relatorio_TCC_Mestrado_Base_1_0_FHZ.aux
+A level-1 auxiliary file: Pre-Textuais/Include_Sim_1_0.aux
+A level-1 auxiliary file: Pre-Textuais/Include_Abv_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Int_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Rev_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Met_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Mod_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Con_1_0.aux
+The style file: Bibliografia/abntFHZ5.bst
+Database file #1: Bibliografia/Bibliografia_modelo.bib
+Warning--I didn't find a database entry for "beckPerspective2021"
+Warning--I didn't find a database entry for "faliniReview2022"
+Warning--I didn't find a database entry for "huFlow2020"
+Warning--I didn't find a database entry for "Boundary2018"
+Warning--I didn't find a database entry for "hillebrechtCertified2022"
+Warning--I didn't find a database entry for "nagaoCharacteristics2013"
+Warning--I didn't find a database entry for "dengDatadriven2021"
+Warning--I didn't find a database entry for "kontolatiLearning2023"
+Warning--I didn't find a database entry for "zhangMicrostructure2021"
+Warning--I didn't find a database entry for "casenaveMMGP2023"
+Warning--I didn't find a database entry for "massaMultiresolution2022"
+Warning--I didn't find a database entry for "aliClustering2021"
+Warning--I didn't find a database entry for "barweyUsing2022"
+Warning--I didn't find a database entry for "boltonApplications2019"
+Warning--I didn't find a database entry for "brightCompressive2013"
+Warning--I didn't find a database entry for "bukkaAssessment2021"
+Warning--I didn't find a database entry for "carterDatadriven2021"
+Warning--I didn't find a database entry for "chengDatadriven2020"
+Warning--I didn't find a database entry for "demoNonintrusive2019"
+Warning--I didn't find a database entry for "erichsonShallow2020"
+Warning--I didn't find a database entry for "genevaMultifidelity2020"
+Warning--I didn't find a database entry for "giannakisKoopman2018"
+Warning--I didn't find a database entry for "hodgesCompartment2019"
+Warning--I didn't find a database entry for "huangLimitedprojection2020"
+Warning--I didn't find a database entry for "jayaramanInterplay2019"
+Warning--I didn't find a database entry for "kongDeep2021"
+Warning--I didn't find a database entry for "liFlow2020"
+Warning--I didn't find a database entry for "liuSupervised2021"
+You've used 0 entries,
+            2525 wiz_defined-function locations,
+            684 strings with 5703 characters,
+and the built_in function-call counts, 11 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 2
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 28 warnings)
